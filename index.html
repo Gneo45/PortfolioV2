@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"
+        type='text/css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+    <link rel="stylesheet" href="/style/style.css">
+    <meta name="description" content="Grégory Néault Portofolio - Développeur web Full Stack">
+    <meta name="author" content="Grégory Néault">
+    <meta name="Keywords"
+        content="portfolio, gneault, Referencement web, Gregory NEAULT, Developpeur web, Node.JS , MERN, MEAN, SEO, Développeur JavaScript, Mobile, Android, Informatique">
+    <meta name="Robots" content="all">
+    <title>Portfolio Développeur web - Grégory NEAULT</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Portfolio</a>
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="menu">
+            <li><a href="#home" onclick="toggleMenu();">Accueil</a></li>
+            <li><a href="#work" onclick="toggleMenu();">Réalisations</a></li>
+            <li><a href="#about" onclick="toggleMenu();">A propos</a></li>
+            <li><a href="#services" onclick="toggleMenu();">Services</a></li>         
+            
+            <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
+        </ul>
+    </header>
+    <section class="banner" id="home">
+        <div class="full-stack"> <span>Full</span> <span>Stack</span> </div>
+
+        <div class="textBx">
+            <h2>Bonjour, Je suis<br><span>Grégory Néault.</span></h2>
+            <h1>Je suis Développeur Web</h1>
+            <div class="skillBx waviy">
+                <span style="--i:1"><i class="devicon-html5-plain-wordmark colored"></i></span>
+                <span style="--i:2"><i class="devicon-css3-plain-wordmark colored"></i></span>
+                <span style="--i:3"><i class="devicon-sass-original colored"></i></span>
+                <span style="--i:4"><i class="devicon-javascript-plain colored"></i></span>
+                <span style="--i:5"><i class="devicon-nodejs-plain colored"></i></span>
+                <span style="--i:6"> <i class="devicon-react-original colored"></i></span>
+                <span style="--i:7"> <i class="devicon-angularjs-plain"></i></span>
+                <span style="--i:8"> <i class="devicon-mongodb-plain colored"></i></span>
+
+            </div>
+            <a href="#about" class="btn">A propos de moi</a>
+            <a href="Data/cv GN.pdf" class="btn" download="Mon cv">Mon CV</a>
+        </div>
+    </section>
+
+
+    <section class="work" id="work">
+        <div class="heading">
+            <h2>Mes dernières réalisations</h2>
+        </div>
+
+        <div class="content">
+            <div class=" workBx workBx1" data-modal-target="#modal-LazyBeast">
+                <h1>Lazy Beast Network</h1>
+
+
+
+            </div>
+            <div class="modal" id="modal-LazyBeast">
+                <div class="modal-header">
+                    <div class="title">lazybeast</div>
+                    <button data-close-button class="close-button">&times;</button>
+                </div>
+
+                <div class="modal-body">
+                    <p>Un réseau social créé avec<strong> Node js, React, express et MongoDB</strong>!</p>
+                    <p>Partager vos humeur, photos, video et lien avec vos followers </p>
+                    <a href="#about" class="btn-project-link">Consulter le site</a>
+                </div>
+            </div>
+
+
+
+            <div class="workBx workBx2" data-modal-target="#modal-cineApp">
+                <h1>CineFiles</h1>
+            </div>
+            <div class="modal" id="modal-cineApp">
+                <div class="modal-header">
+                    <div class="title">Cinephile</div>
+                    <button data-close-button class="close-button">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>Une application pour trouver des films et se creer une liste de coup de couer à regardé concu
+                        avec <strong> React</strong>!</p>
+                    <p>Partager vos humeur, photos, video et lien avec vos followers </p>
+                    <a href="#about" class="btn-project-link">Consulter le site</a>
+                </div>
+
+            </div>
+
+
+            <div class="workBx workBx3" data-modal-target="#modal-bookApp">
+                <h1>FreeBrary</h1>
+            </div>
+
+            <div class="modal" id="modal-bookApp">
+                <div class="modal-header">
+                    <div class="title">FreeBrary</div>
+                    <button data-close-button class="close-button">&times;</button>
+                </div>
+                <div class="modal-body">
+
+                </div>
+            </div>
+
+
+
+            <div class="workBx workBx4" data-modal-target="#modal-Flag">
+                <h1>WorldFlag</h1>
+            </div>
+
+            <div class="modal" id="modal-Flag">
+                <div class="modal-header">
+                    <div class="title">cineapp</div>
+                    <button data-close-button class="close-button">&times;</button>
+                </div>
+                <div class="modal-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, sunt deserunt, quasi animi
+                    pariatur possimus repellat totam aspernatur fugiat dolorum consequatur eos maxime repudiandae! Quo
+                    ullam maxime iure minima eius. Harum qui, excepturi incidunt omnis dolor veniam beatae id culpa
+                    natus, molestiae maiores facilis nam libero saepe. Quaerat sapiente porro incidunt, laborum
+                    dignissimos nam cupiditate quod, suscipit cum delectus tempora, illo quos earum mollitia inventore
+                    recusandae voluptates distinctio maxime alias praesentium quis? Maxime necessitatibus dolores
+                    laudantium. Numquam, voluptates. Dolorum, a!
+                </div>
+            </div>
+
+        </div>
+
+        <div class="heading">
+            <a href="https://github.com/Gneo45" class="btn">En voir plus</a>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="heading white">
+            <h2>A propos de moi</h2>
+        </div>
+        <div class="content">
+            <div class="contentBx">
+                <h3>Je suis un développeur web full Stack</h3>
+                <p>Actuellement en formation et ayant pour objectif ma certification professionnelle de développeur web
+                    Full stack, je recherche un poste de stagiaire développeur.
+                    <br><br>Je possède d'ores et déjà une bonne maîtrise des langages de programmation et des lignes de
+                    codes informatiques, ainsi que des bonnes pratiques de recherches de solution.<br>Autonome de
+                    nature, je peux travailler seul ou en
+                    groupe, étant également capable de m’adapter à un environnement que je ne connais pas.
+                    <br><br>Je sais faire preuve de force de proposition lorsque l’on m’en donne la liberté, cherchant
+                    toujours à améliorer et optimiser les projets au maximum pour satisfaire au mieux la demande du
+                    client. De plus je ne manquerais pas
+                    d’apporter mon sérieux et ma bonne humeur avec moi.
+                </p>
+            </div>
+            <div class="w50">
+                <img src="assets/Go_up.jpg" alt="image decorative" class="img">
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="heading ">
+            <h2>Mes services</h2>
+
+        </div>
+        <div class="content">
+            <div class="servicesBx">
+                <img src="/assets/icon1.png" alt="UI design">
+                <h2>Web Design</h2>
+                <p>La création et la conception de site web moderne et esthétique, conception d'interface et
+                    d’architecture
+                    interactionnelle</p>
+            </div>
+            <div class="servicesBx">
+                <img src="/assets/icon2.png" alt="web developpement">
+                <h2>web developpement</h2>
+                <p>développement d'applications web dynamique "One Page", rapide et reactive, permetant une experience
+                    utilisateur améliorée </p>
+            </div>
+            <div class="servicesBx">
+                <img src="/assets/icon3.png" alt="Mobile app">
+                <h2>Mobile app</h2>
+                <p>conception responsive, afin que les contenus s'adaptent automatiquement à la taille de l'écran de
+                    l'appareil utilisé, et develeppoment d'application grace au framework ionic</p>
+            </div>
+            <div class="servicesBx">
+                <img src="/assets/icon4.png" alt="Back-end">
+                <h2>Back-end</h2>
+                <p>Conception des éléments techniques nécessaires au fonctionnement d'un site, gestion des bases de
+                    données avec MongoDb</p>
+            </div>
+            <div class="servicesBx">
+                <img src="/assets/icon5.png" alt="contenu">
+                <h2>Création de contenu</h2>
+                <p>Passioné, curieux et cultivé je pourrais agrementé vos projets de contenu interessant!</p>
+            </div>
+            <div class="servicesBx">
+                <img src="/assets/icon6.png" alt="commerce">
+                <h2>Fibre commerciale</h2>
+                <p>Grace à mon parcours et ma grande expérience dans le commerce et le service client, mes projet sont
+                    adaptés et pensés pour la satisfaction du client !</p>
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+    <section class="contact" id="contact">
+        <div class="heading white">
+            <h2>Me contacter</h2>
+            <p> </p>
+        </div>
+        <div class="content">
+            <div class="contactInfo">
+                <h3>Informations</h3>
+                <div class="contactInfoBx">
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                        <div class="text">
+                            <h3>Adresse</h3>
+                            <p>60, rue de l'Huilerie<br>Saint Maurice sur Fessard<br>45200 - France</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <div class="text">
+                            <h3>Telephone</h3>
+                            <p>06 15 09 10 27</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa fa-envelope-o"></i>
+                        </div>
+                        <div class="text">
+                            <h3>Email</h3>
+                            <p>contact@gregoryneault.fr</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="formBx">
+                <form action="process.php" method="post">
+
+
+                    <input type="text" name="nom" placeholder="Nom complet" required="required">
+                    <input type="email" name="email" placeholder="Email" required="required">
+                    <textarea name="msg" placeholder="Vote message" required="required"></textarea>
+                    <button type="submit" value="Envoyer" name="btn-send" class="btn">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <div class="copyright">
+        <p>@ G. Néault 2021</p>
+    </div>
+
+
+    <div id="overlay"></div>
+
+    <script src="/script/index.js"></script>
+</body>
+
+</html>
