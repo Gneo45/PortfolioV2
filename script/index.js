@@ -17,24 +17,49 @@ const developeur = document.querySelector(".Developeur");
 const aboutMeBtn = document.getElementById("about-me-btn");
 const downloadResumeBtn = document.getElementById("download-resume-btn");
 const workTitle = document.querySelector(".work-title");
+const modalTextGnShop = document.querySelector(".modal-body-texte-GNShop");
 const modalTextLazyBeast = document.querySelector(
   ".modal-body-texte-LazyBeast"
 );
+
 const modalTextCineApp = document.querySelector(".modal-body-texte-cineApp");
 const modalTextBookApp = document.querySelector(".modal-body-texte-bookApp");
 const modalTextFlagApp = document.querySelector(".modal-body-texte-flagApp");
+
+const btnProjectLinkGNshop = document.querySelector(".btn-project-link-GNshop");
+
 const btnProjectLinkLazyBeast = document.querySelector(
   ".btn-project-link-LazyBeast"
 );
+
 const btnProjectLinkCineApp = document.querySelector(
-  ".btn-project-link-cineApp"
+  ".btn-project-link-CineApp"
 );
 const btnProjectLinkBookApp = document.querySelector(
-  ".btn-project-link-bookApp"
+  ".btn-project-link-BookApp"
 );
+
 const btnProjectLinkFlagApp = document.querySelector(
-  ".btn-project-link-flagApp"
+  ".btn-project-link-FlagApp"
 );
+
+
+const btnProjectLinkFaceDetection = document.querySelector(
+  ".btn-project-link-FaceDetection"
+);
+const btnProjectLinkPiano = document.querySelector(".btn-project-link-Piano");
+
+const btnProjectLinkBadCitizen = document.querySelector(
+  ".btn-project-link-BadCitizen"
+);
+
+const btnProjectLinkTicTacToe = document.querySelector(
+  ".btn-project-link-TicTacToe"
+);
+const btnProjectLinkOrleans = document.querySelector(
+  ".btn-project-link-Orleans"
+);
+
 const titleAboutMe = document.querySelector(".title-about-me");
 const textAboutMe = document.querySelector(".text-about-me");
 
@@ -66,14 +91,22 @@ const formAdresse = document.querySelector(".adresse");
 const formPhone = document.querySelector(".phone");
 const btnSendForm = document.querySelector(".btn-send-form");
 
- const inputFormName = document.querySelector('.input-form-name') 
- const inputFormMail = document.querySelector('.input-form-mail') 
- const formTextarea = document.querySelector('.form-textarea') 
-
-
+const inputFormName = document.querySelector(".input-form-name");
+const inputFormMail = document.querySelector(".input-form-mail");
+const formTextarea = document.querySelector(".form-textarea");
 
 const changeLanguageBtnToEN = document.querySelector(".change-language-btn-EN");
 const changeLanguageBtnToFR = document.querySelector(".change-language-btn-FR");
+
+const btnSeeMore = document.querySelector(".see-more");
+const workBx4 = document.querySelector(".workBx4");
+const workBx5 = document.querySelector(".workBx5");
+const workBx6 = document.querySelector(".workBx6");
+const workBx7 = document.querySelector(".workBx7");
+const workBx8 = document.querySelector(".workBx8");
+const workBx9 = document.querySelector(".workBx9");
+
+console.log(workBx5);
 
 const languageVersion = {
   navLinkHome: {
@@ -117,6 +150,10 @@ const languageVersion = {
     EN: "My last projects",
     FR: "Mes dernières réalisations",
   },
+  modalTextEcommerce: {
+    EN: `An e-commerce site created with <strong> React and commerce.js</strong>! <br> Sell and buy your products anywhere in the world in a few clicks</p>`,
+    FR: `Un site e-commerce creer avec <strong> React et commerce.js</strong>! <br> Vendez et achetez vos produits partout dans le monde en quelques clics</p>`,
+  },
   modalTextLazyBeast: {
     EN: `A social network build with<strong> Node js, React, express and MongoDB</strong>!Share your
     mood, photos, video and link with your followers</p>`,
@@ -135,41 +172,73 @@ const languageVersion = {
     EN: "my Resume",
     FR: "mon Cv",
   },
+  btnProjectLinkGNshop: {
+    EN: "Visit website",
+    FR: "Consulter le site",
+  },
   btnProjectLinkLazyBeast: {
-    EN: "my Resume",
+    EN: "Visit website",
     FR: "Consulter le site",
   },
   btnProjectLinkCineApp: {
-    EN: "my Resume",
+   EN: "Visit website",
     FR: "Consulter le site",
   },
   btnProjectLinkBookApp: {
-    EN: "my Resume",
+   EN: "Visit website",
     FR: "Consulter le site",
   },
   btnProjectLinkFlagApp: {
-    EN: "my Resume",
+    EN: "Visit website",
     FR: "Consulter le site",
+  },
+  btnProjectLinkFaceDetection: {
+    EN: "Visit website",
+    FR: "Consulter le site",
+  },
+  btnProjectLinkPiano: {
+   EN: "Visit website",
+    FR: "Consulter le site",
+  },
+  btnProjectLinkBadCitizen: {
+    EN: "Visit website",
+    FR: "Consulter le site",
+  },
+  btnProjectLinkTicTacToe: {
+   EN: "Visit website",
+    FR: "Consulter le site",
+  },
+  btnProjectLinkOrleans: {
+    EN: "Visit website",
+    FR: "Consulter le site",
+  },
+  btnSeeMore: {
+    EN: "See more",
+    FR: "En voir plus"
   },
   titleAboutMe: {
     EN: "About me",
     FR: "A propos de moi",
   },
   textAboutMe: {
-    EN: `Currently in training and with the aim of obtaining professional certification as a web developer
-    Full stack, I'm looking for a trainee developer position.
-    <br> <br> I possess ears and already have a good mastery of programming languages ​​and lines of
-    IT codes, as well as practical solutions for solution research. <br> Autonomous of
+    EN: `Recently graduated from the full stack web and mobile web developer professional certification, I am looking for a developer job.
+    <br><br>
+    I have a good mastery of html, css, sass, and React and Angular frameworks on the Front-End side.
+    On the Back-End side I master NodeJS and its components, and i'm able to create a complete project with the MERN stack.
+    I know good development and solution research practices.<br>
+    Autonomous by
     nature, I can work alone or in
-    group, being equally capable of adapting to an environment I do not know.
-    <br> <br> I'm going to try to force a proposal when I'm given the freedom, looking
-    always to improve and optimize the projects to the maximum to satisfy the demand of the
-    client. More I do not miss
-    to bring my serious and good mood with me.`,
-    FR: `Actuellement en formation et ayant pour objectif ma certification professionnelle de développeur web
-    Full stack, je recherche un poste de stagiaire développeur.
-    <br><br>Je possède d'ores et déjà une bonne maîtrise des langages de programmation et des lignes de
-    codes informatiques, ainsi que des bonnes pratiques de recherches de solution.<br>Autonome de
+    group, also being able to adapt to an environment that I do not know.
+    <br><br>
+    I know how to show strength of proposal when I am given the freedom to do so, seeking
+    always to improve and optimize the projects to the maximum to best meet the demand of the
+    customer. Plus I wouldn't miss
+    to bring my seriousness and my good mood with me.
+`,
+    FR: `Fraîchement diplômé de la certification professionelle de développeur web et web mobile full stack je recherche un poste de développeur
+    <br><br>J'ai une bonne maîtrise des langages html, css, sass, et des frameworks React et Angular côté Front-End.
+    Coté Back-End je maitrise NodeJS et ses composants, et suis capable de créer un projet complet avec le stack MERN.
+    je connais les bonnes pratiques de développement et de recherches de solution.<br>Autonome de
     nature, je peux travailler seul ou en
     groupe, étant également capable de m’adapter à un environnement que je ne connais pas.
     <br><br>Je sais faire preuve de force de proposition lorsque l’on m’en donne la liberté, cherchant
@@ -186,23 +255,23 @@ const languageVersion = {
     FR: "Web Design",
   },
   textWebDesign: {
-    EN: "The creation and design of a modern and aesthetic web site, interface design and interactive architecture",
+    EN: "Creation and design of modern and aesthetic web site, interface design and interactive architecture",
     FR: "La création et la conception de site web moderne et esthétique, conception d'interface et d’architecture interactionnelle",
   },
   titleDev: {
-    EN: "web developpement",
-    FR: "web developpement",
+    EN: "Web developpement",
+    FR: "Web developpement",
   },
   textDev: {
-    EN: 'development of dynamic web applications "One Page", fast and reactive, allowing an improved user experience',
-    FR: `développement d'applications web dynamique "One Page", rapide et reactive, permetant une experience utilisateur améliorée`,
+    EN: 'Development of "One Page" dynamic web applications , fast and reactive, allowing an improved user experience',
+    FR: `Développement d'applications web dynamique "One Page", rapide et reactive, permetant une experience utilisateur améliorée`,
   },
   titleMobile: {
     EN: "Mobile app",
     FR: "Mobile app",
   },
   textMobile: {
-    EN: "Responsive conception, so that the contents automatically adapt to the size of the screen used by the device, and develop application grace in the ionic framework",
+    EN: "Responsive conception, allowing contents to automatically adapt to the screen size used by the device, and application development with ionic framework",
     FR: `conception responsive, afin que les contenus s'adaptent automatiquement à la taille de l'écran de l'appareil utilisé, et develeppoment d'application grace au framework ionic`,
   },
   titleBackEnd: {
@@ -210,7 +279,7 @@ const languageVersion = {
     FR: "Back-end",
   },
   textBackEnd: {
-    EN: "Design of technical elements necessary for the operation of a site, management of data bases with MongoDb",
+    EN: "Design of technical elements necessary for the operation of website, manage data bases with MongoDb",
     FR: "Conception des éléments techniques nécessaires au fonctionnement d'un site, gestion des bases de données avec MongoDb",
   },
   titleContenu: {
@@ -218,7 +287,7 @@ const languageVersion = {
     FR: "Création de contenu",
   },
   textContenu: {
-    EN: "Passionate, curious and cultivated I might agree your interesting content projects!",
+    EN: "Passionate, curious and cultivated I can create interesting content for your projects!",
     FR: "Passioné, curieux et cultivé je pourrais agrementé vos projets de contenu interessant!",
   },
   titleCommerce: {
@@ -226,7 +295,7 @@ const languageVersion = {
     FR: "Fibre commerciale",
   },
   textCommerce: {
-    EN: "Thanks to my career and my extensive experience in commerce and customer service, my projects are adapted and thought for customer satisfaction!",
+    EN: "with multiple cross-skills and my experience in commerce and customer service, my projects are adapted and thought for customer satisfaction!",
     FR: "Grace à mon parcours et ma grande expérience dans le commerce et le service client, mes projet sont adaptés et pensés pour la satisfaction du client !",
   },
   titleFormContact: {
@@ -245,23 +314,22 @@ const languageVersion = {
     EN: "Phone",
     FR: "Telephone",
   },
-  btnSendForm:{
-      EN: "SEND",
-      FR: "ENVOYER"
+  btnSendForm: {
+    EN: "SEND",
+    FR: "ENVOYER",
   },
-  inputFormName:{
+  inputFormName: {
     EN: "Full name",
-    FR: "Nom complet"
-},
-inputFormMail:{
+    FR: "Nom complet",
+  },
+  inputFormMail: {
     EN: "your mail",
-    FR: "Votre Email"
-},
-formTextarea:{
+    FR: "Votre Email",
+  },
+  formTextarea: {
     EN: "Message",
-    FR: "Votre message"
-},
-  
+    FR: "Votre message",
+  },
 };
 
 changeLanguageBtnToEN.addEventListener("click", () => {
@@ -269,6 +337,16 @@ changeLanguageBtnToEN.addEventListener("click", () => {
 });
 changeLanguageBtnToFR.addEventListener("click", () => {
   changelanguageToFR();
+});
+console.log(workBx5);
+
+btnSeeMore.addEventListener("click", () => {
+  workBx4.classList.remove("hide");
+  workBx5.classList.remove("hide");
+  workBx6.classList.remove("hide");
+  workBx7.classList.remove("hide");
+  workBx8.classList.remove("hide");
+  workBx9.classList.remove("hide");
 });
 
 /*SCROOL SYSTEM */
@@ -347,21 +425,34 @@ function changelanguageToEng() {
   navLinkAbout.innerHTML = languageVersion.navLinkAbout.EN;
   navLinkServices.innerHTML = languageVersion.navLinkServices.EN;
   navLinkContact.innerHTML = languageVersion.navLinkContact.EN;
-  bonjour.innerHTML = languageVersion.bonjour.EN;
 
-  developeur.innerHTML = languageVersion.developeur.EN;
-  aboutMeBtn.innerHTML = languageVersion.aboutMeBtn.EN;
   downloadResumeBtn.innerHTML = languageVersion.downloadResumeBtn.EN;
+  aboutMeBtn.innerHTML = languageVersion.aboutMeBtn.EN;
+  btnProjectLinkGNshop.innerHTML = languageVersion.btnProjectLinkGNshop.EN;
+  btnProjectLinkLazyBeast.innerHTML = languageVersion.btnProjectLinkLazyBeast.EN;
+  btnProjectLinkLazyBeast.innerHTML = languageVersion.btnProjectLinkLazyBeast.EN;
+  btnProjectLinkCineApp.innerHTML = languageVersion.btnProjectLinkCineApp.EN;
+  btnProjectLinkBookApp.innerHTML = languageVersion.btnProjectLinkBookApp.EN;
+  btnProjectLinkFlagApp.innerHTML = languageVersion.btnProjectLinkFlagApp.EN;
+  btnProjectLinkFaceDetection.innerHTML = languageVersion.btnProjectLinkFaceDetection.EN;
+  btnProjectLinkPiano.innerHTML = languageVersion.btnProjectLinkPiano.EN;
+  btnProjectLinkBadCitizen.innerHTML = languageVersion.btnProjectLinkBadCitizen.EN;
+  btnProjectLinkTicTacToe.innerHTML = languageVersion.btnProjectLinkTicTacToe.EN;
+  btnProjectLinkOrleans.innerHTML = languageVersion.btnProjectLinkOrleans.EN;
+
+  btnSeeMore.innerHTML = languageVersion.btnSeeMore.EN;
+
+  bonjour.innerHTML = languageVersion.bonjour.EN;
+  developeur.innerHTML = languageVersion.developeur.EN;
+
   workTitle.innerHTML = languageVersion.workTitle.EN;
+  modalTextGnShop.innerHTML = languageVersion.modalTextEcommerce.EN;
+
   modalTextLazyBeast.innerHTML = languageVersion.modalTextLazyBeast.EN;
   modalTextCineApp.innerHTML = languageVersion.modalTextCineApp.EN;
   modalTextBookApp.innerHTML = languageVersion.modalTextBookApp.EN;
   modalTextFlagApp.innerHTML = languageVersion.modalTextFlagApp.EN;
-  btnProjectLinkLazyBeast.innerHTML =
-    languageVersion.btnProjectLinkLazyBeast.EN;
-  btnProjectLinkCineApp.innerHTML = languageVersion.btnProjectLinkCineApp.EN;
-  btnProjectLinkBookApp.innerHTML = languageVersion.btnProjectLinkBookApp.EN;
-  btnProjectLinkFlagApp.innerHTML = languageVersion.btnProjectLinkFlagApp.EN;
+
   titleAboutMe.innerHTML = languageVersion.titleAboutMe.EN;
   textAboutMe.innerHTML = languageVersion.textAboutMe.EN;
   titleServices.innerHTML = languageVersion.titleServices.EN;
@@ -382,9 +473,9 @@ function changelanguageToEng() {
   formAdresse.innerHTML = languageVersion.formAdresse.EN;
   formPhone.innerHTML = languageVersion.formPhone.EN;
   btnSendForm.innerHTML = languageVersion.btnSendForm.EN;
-  inputFormName.placeholder = languageVersion.inputFormName.EN
-inputFormMail.placeholder = languageVersion.inputFormMail.EN
-formTextarea.placeholder = languageVersion.formTextarea.EN
+  inputFormName.placeholder = languageVersion.inputFormName.EN;
+  inputFormMail.placeholder = languageVersion.inputFormMail.EN;
+  formTextarea.placeholder = languageVersion.formTextarea.EN;
 }
 
 function changelanguageToFR() {
@@ -399,15 +490,29 @@ function changelanguageToFR() {
   aboutMeBtn.innerHTML = languageVersion.aboutMeBtn.FR;
   downloadResumeBtn.innerHTML = languageVersion.downloadResumeBtn.FR;
   workTitle.innerHTML = languageVersion.workTitle.FR;
+  modalTextGnShop.innerHTML = languageVersion.modalTextEcommerce.FR;
+
   modalTextLazyBeast.innerHTML = languageVersion.modalTextLazyBeast.FR;
   modalTextCineApp.innerHTML = languageVersion.modalTextCineApp.FR;
   modalTextBookApp.innerHTML = languageVersion.modalTextBookApp.FR;
   modalTextFlagApp.innerHTML = languageVersion.modalTextFlagApp.FR;
-  btnProjectLinkLazyBeast.innerHTML =
-    languageVersion.btnProjectLinkLazyBeast.FR;
+
+  btnProjectLinkGNshop.innerHTML = languageVersion.btnProjectLinkGNshop.FR;
+  btnProjectLinkLazyBeast.innerHTML = languageVersion.btnProjectLinkLazyBeast.FR;
+  btnProjectLinkLazyBeast.innerHTML = languageVersion.btnProjectLinkLazyBeast.FR;
   btnProjectLinkCineApp.innerHTML = languageVersion.btnProjectLinkCineApp.FR;
   btnProjectLinkBookApp.innerHTML = languageVersion.btnProjectLinkBookApp.FR;
   btnProjectLinkFlagApp.innerHTML = languageVersion.btnProjectLinkFlagApp.FR;
+  btnProjectLinkFaceDetection.innerHTML = languageVersion.btnProjectLinkFaceDetection.FR;
+  btnProjectLinkPiano.innerHTML = languageVersion.btnProjectLinkPiano.FR;
+  btnProjectLinkBadCitizen.innerHTML = languageVersion.btnProjectLinkBadCitizen.FR;
+  btnProjectLinkTicTacToe.innerHTML = languageVersion.btnProjectLinkTicTacToe.FR;
+  btnProjectLinkOrleans.innerHTML = languageVersion.btnProjectLinkOrleans.FR;
+
+  btnSeeMore.innerHTML = languageVersion.btnSeeMore.FR;
+
+
+
   titleAboutMe.innerHTML = languageVersion.titleAboutMe.FR;
   textAboutMe.innerHTML = languageVersion.textAboutMe.FR;
   titleServices.innerHTML = languageVersion.titleServices.FR;
@@ -428,8 +533,7 @@ function changelanguageToFR() {
   formAdresse.innerHTML = languageVersion.formAdresse.FR;
   formPhone.innerHTML = languageVersion.formPhone.FR;
   btnSendForm.innerHTML = languageVersion.btnSendForm.FR;
-  inputFormName.placeholder = languageVersion.inputFormName.FR
-    inputFormMail.placeholder = languageVersion.inputFormMail.FR
-    formTextarea.placeholder = languageVersion.formTextarea.FR
-
+  inputFormName.placeholder = languageVersion.inputFormName.FR;
+  inputFormMail.placeholder = languageVersion.inputFormMail.FR;
+  formTextarea.placeholder = languageVersion.formTextarea.FR;
 }

@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
+   
 }
+
 
 .change-language-btn-EN {
     background-color: transparent;
@@ -189,6 +192,7 @@ section {
     transition: 0.5s ease-in-out;
     margin-right: 3px;
     border: 1px solid rgba(255, 255, 255, 0.226);
+    min-width: 210px;
   }
   
 
@@ -250,9 +254,10 @@ header.sticky {
 }
 
 header .logo {
+    font-family: 'Rock Salt', cursive;
     color: #21a6f3;
-    font-size: 24px;
-    text-transform: uppercase;
+    font-size: 1.5rem;
+    /* text-transform: uppercase; */
     text-decoration: none;
     font-weight: 700;
     letter-spacing: 2px;
@@ -334,6 +339,16 @@ header.sticky ul li a {
    transition: 0.5s ease-in-out;
   
 }
+
+.workBx0{
+    background-image: url('/assets/Logo projet/gnshop.png');
+    background-size: 35%;
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode:color-burn;
+}
+
 .workBx1{
     background-image: url('/assets/Logo projet/LazyBeast.png');
     background-size: contain;
@@ -364,6 +379,47 @@ header.sticky ul li a {
     background-position: center;
     background-blend-mode:color-burn;
 }
+.workBx5{
+    background-image: url('/assets/Logo projet/eyes.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode:color-burn;
+}
+.workBx6{
+    background-image: url('/assets/Logo projet/Piano.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode:color-burn;
+}
+.workBx7{
+    background-image: url('/assets/Logo projet/badcitizen.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode:color-burn;
+}
+.workBx8{
+    background-image: url('/assets/Logo projet/tictac.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode:color-burn;
+}
+
+.workBx9{
+    background-image: url('/assets/Logo projet/orleans.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode:color-burn;
+}
+
+.hide{
+    display: none;
+}
+
 
 .workBx:hover {
     transform: scale(1.1);
@@ -586,6 +642,18 @@ header.sticky ul li a {
     align-items: center;
     border-bottom: 1px solid rgb(86, 88, 248);
   }
+
+.modal-header .title{
+display: flex;
+    align-items: center;
+    
+}
+.modal-header .title i{
+    padding: 2px;
+}
+.modal-header .title i:first-child{
+    padding-left: 10px;
+}
   
   .modal-header .title {
     font-size: 1.5rem;
@@ -616,10 +684,14 @@ header.sticky ul li a {
     align-items: center;
     
   }
+
+  .modal-body p  {
+      margin-bottom: 20px;
+  }
   .carousel {
-      padding-top: 20px;
-    width: 50%;
-    height: 50%;
+     
+    width: 70%;
+    height: 70%;
     position: relative;
   }
   
@@ -808,6 +880,17 @@ header.sticky ul li a {
         justify-content: center;
         align-items: center;
     } 
+    .banner .skillBx i {
+        padding: 3px;
+        font-size: 2.5rem;
+        margin-top: 10px;
+      
+       
+      }
+      .btn{
+        font-size: 0.6rem;
+        width: 170px;
+    }
    
 }
 
@@ -830,7 +913,7 @@ header.sticky ul li a {
     }
     .carousel {
         padding-top: 20px;
-      width: 80%;
+      width: 100%;
       height: 100%;
       position: relative;
     }
@@ -857,4 +940,12 @@ header.sticky ul li a {
     flex-direction: column;
     
 }
+.banner .skillBx i {
+    padding: 3px;
+    font-size: 2rem;
+    margin-top: 10px;
+  
+   
+  }
+ 
 }
