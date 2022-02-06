@@ -221,28 +221,23 @@
 
 
             <div class="workBx workBx5 hide" data-modal-target="#modal-FaceRecognition">
-                <h1>Face Recognition System</h1>
+                <h1>Face Recognition</h1>
             </div>
             <div class="modal" id="modal-FaceRecognition">
                 <div class="modal-header">
-                    <div class="title">Face Recognition System <i class="devicon-javascript-plain"></i></div>
+                    <div class="title">Face Recognition<i class="devicon-javascript-plain"></i></div>
                     <button data-close-button class="close-button">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <p class="modal-body-texte-flagApp">Une petite application web crée avec <strong> Javascript </strong>! <br>Activer votre camera pour laisser l'inteligence artificiel detecter votre visage et votre humeur!</p>
+                    <p class="modal-body-texte-flagApp">Une application web crée avec <strong> Javascript </strong>! <br>Activer votre camera pour laisser l'inteligence artificiel detecter votre visage et votre humeur!</p>
                     <div class="carousel" data-carousel>
-                        <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
-                        <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
+                    <!--     <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
+                        <button class="carousel-button next" data-carousel-button="next">&#8658;</button> -->
                         <ul data-slides>
                             <li class="slide" data-active>
-                                <img src="https://source.unsplash.com/78A265wPiO4" alt="Nature Image #1">
+                                <img src="./assets/ProjectScreen/face/face1.png" alt="Nature Image #1">
                             </li>
-                            <li class="slide">
-                                <img src="https://source.unsplash.com/eOpewngf68w" alt="Nature Image #2">
-                            </li>
-                            <li class="slide">
-                                <img src="https://source.unsplash.com/ndN00KmbJ1c" alt="Nature Image #3">
-                            </li>
+                          
                         </ul>
                     </div>
                     <a href="https://www.gregoryneault.fr/faceDetection/" target="_blank" class="btn btn-project-link-FaceDetection" id="btn-project-link">Consulter le site</a>
@@ -382,9 +377,9 @@
         </div>
         <div class="content">
             <div class="contentBx">
-                <p class="text-about-me">Fraîchement diplômé de la certification professionelle de développeur web et web mobile full stack je recherche un poste de développeur
+                <p class="text-about-me">Fraîchement diplômé de la certification professionelle de développeur web et web mobile full stack et specialisé en Javascript et ses frameworks, je recherche un poste de développeur.
                     <br><br>J'ai une bonne maîtrise des langages html, css, sass, et des frameworks React et Angular côté Front-End.
-                    Coté Back-End je maitrise NodeJS et ses composants, et suis capable de créer un projet complet avec le stack MERN.
+                    Coté Back-End je maitrise NodeJS et ses composants, et suis capable de créer un projet complet avec les stacks MERN/MEAN.
                     je connais les bonnes pratiques de développement et de recherches de solution.<br>Autonome de
                     nature, je peux travailler seul ou en
                     groupe, étant également capable de m’adapter à un environnement que je ne connais pas.
@@ -394,8 +389,17 @@
                     d’apporter mon sérieux et ma bonne humeur avec moi.
                 </p>
             </div>
-            <div class="w50">
-                <img src="assets/Go_up.jpg" alt="image decorative" class="imgAbout">
+            <div class="w50"> 
+                
+                <div class="bar front expert" data-skill="HTML5"></div>
+                <div class="bar front expert" data-skill="CSS3"></div>
+                <div class="bar front expert" data-skill="JAVASCRIPT ES6"></div>
+                <div class="bar back advanced" data-skill="REACT"></div>
+                <div class="bar back advanced" data-skill="NODE JS"></div>                
+                <div class="bar back advanced" data-skill="IONIC"></div>                
+                <div class="bar back intermediate" data-skill="ANGULAR"></div>
+                <div class="bar back intermediate" data-skill="SASS"></div>
+                
             </div>
         </div>
     </section>

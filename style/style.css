@@ -307,27 +307,139 @@ header.sticky ul li a {
 }
 
 .contentBx {
-    padding-right: 30px;
+    padding-right: 75px;
+    width: 70vw;
 }
 
 .contentBx h3 {
     font-size: 24px;
     margin-bottom: 10px;
+   
+}
+
+/**/
+.title-about-me{
+    text-align: left;
+
+}
+
+.text-about-me{
+
 }
 
 .w50 {
-    max-height: 10%;
+  /*   max-height: 10%; */
+  width: 50%;
+  margin: 0 auto;
+  
+ 
 }
 
+.w50 h1{
+    margin-bottom: 30px;
+}
  .imgAbout {
     max-width: 100%;
     
 } 
+@keyframes load{
+    from {
+      width: 0%
+    }
+  }
+  @-webkit-keyframes load{
+    from {
+      width: 0%
+    }
+  }
+  @-moz-keyframes load{
+    from {
+      width: 0%
+    }
+  }
+  @-o-keyframes load{
+    from {
+      width: 0%
+    }
+  }
+  
+  .bar{
+    background-color: rgb(44, 44, 44);
+    padding: 5px;
+    border-radius: 15px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #FFF;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+  }
+  .bar::before{
+    content:  attr(data-skill);
+    background-color: #f3b0ff;
+    display: inline-block;
+    padding: 5px 0 5px 10px;
+    border-radius: inherit;
+    animation: load 2s 0s;
+    -webkit-animation: load 2s 0s;
+    -moz-animation: load 2s 0s;
+    -o-animation: load 2s 0s;
+  }
+  
+  .bar.front::before{
+      color: black;
+    background-color: #21a6f3;
+    box-shadow:   0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #094b81,
+    0 0 62px #094b81;
+    
+    
+   
+  }
+  .bar.back::before{
+    background-color: #a6cfe3;
+  }
+  
+  .bar.learning::before{
+    width: calc(20% - 10px);
+  }
+  .bar.basic::before{
+    width: calc(40% - 10px);
+  }
+  .bar.intermediate::before{
+    color: rgb(252, 252, 252);
+
+    width: calc(60% - 10px);
+    background-color: #0b2636;
+    box-shadow:   0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #094b81,
+    0 0 62px #094b81;
+    
+  }
+  .bar.advanced::before{
+      color: rgb(206, 206, 206);
+    width: calc(80% - 10px);
+    background-color: #246286;
+    box-shadow:   0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #094b81,
+    0 0 62px #094b81;
+    
+  }
+  .bar.expert::before{
+    width: calc(100% - 10px);
+  }
+  
+/**/
 
 /*------*/
 
 .workBx{
-    background-color: #094b81;
+    background-color: #042d4e;
     border-radius: 20px;
     border: 5px solid #fff;
   
@@ -624,7 +736,7 @@ header.sticky ul li a {
     color: white;
     background-color: #111;
     width: 80vw;
-    height: 70vh;
+    height: 80vh;
     max-height: 80%;
     max-width: 80%;
     z-index: 5001;
@@ -947,5 +1059,26 @@ display: flex;
   
    
   }
+  .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-about-me{
+    text-align: center;
+}
+
+.contentBx {
+    padding-right: 30px;
+    width: 100vw;
+}
+.w50 {
+    /*   max-height: 10%; */
+    width: 80vw;
+    margin: 0 auto;
+  
+   
+  }
+
  
 }
