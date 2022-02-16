@@ -51,7 +51,7 @@
                 <span style="--i:8"> <i class="devicon-mongodb-plain colored"></i></span>
             </div>
             <a href="#about" class="btn" id="about-me-btn">A propos de moi</a>
-            <a href="Data/cv GN.pdf" class="btn" id="download-resume-btn" download="Mon cv">Mon CV</a>
+            <a href="Data/CV_Grégory_Néault_FR.pdf" class="btn" id="download-resume-btn" download="Mon cv">Mon CV</a>
         </div>
     </section>
 
@@ -61,7 +61,74 @@
         </div>
         <div class="content">
 
-            <div class=" workBx workBx0" data-modal-target="#modal-GNShop">
+
+
+            
+            <div  class="workBx workBx01 " data-modal-target="#modal-pager">
+                <h1>Messaging App</h1>
+            </div>
+            <div class="modal" id="modal-pager">
+                <div class="modal-header">
+                    <div class="title">Messaging App<i class="devicon-react-original"></i><i class="devicon-css3-plain"></i><i class="devicon-nodejs-plain"></i></div>
+                    <button data-close-button class="close-button">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p class="modal-body-texte-pager">Web app de messagerie créée avec <strong> React, Node, Stream.io et Twilo </strong>! <br>Envoyez des message, gifs, photos, et plus encore. Testez l'application avec le pseudo "visiteur" Mot de passe "visiteur" </p>
+                    <div class="carousel" data-carousel>
+                        <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
+                        <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
+                        <ul data-slides>
+                            <li class="slide" data-active>
+                                <img src="./assets/ProjectScreen/MessagingApp/MessagingApp1.png" alt="Messaging App">
+                            </li>
+                            <li class="slide">
+                                <img src="./assets/ProjectScreen/MessagingApp/MessagingApp2.png" alt="Messaging App">
+                            </li>
+                            <li class="slide">
+                                <img src="./assets/ProjectScreen/MessagingApp/MessagingApp3.png" alt="Messaging App">
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    <a href="https://gn-messenger.netlify.app/" target="_blank" class="btn btn-project-link-pager" id="btn-project-link">Consulter le site</a>
+                </div>
+            </div>
+
+
+
+
+            <div  class="workBx workBx0 " data-modal-target="#modal-geritch">
+                <h1>Gericht</h1>
+            </div>
+            <div class="modal" id="modal-geritch">
+                <div class="modal-header">
+                    <div class="title">Gericht <i class="devicon-react-original"></i><i class="devicon-css3-plain"></i></div>
+                    <button data-close-button class="close-button">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p class="modal-body-texte-geritch">Proposition de site vitrine créé avec <strong> React et css </strong>! <br> pour un restaurant fictif</p>
+                    <div class="carousel" data-carousel>
+                        <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
+                        <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
+                        <ul data-slides>
+                            <li class="slide" data-active>
+                                <img src="./assets/ProjectScreen/Restaurant/resto1.png" alt="site restaurant image1">
+                            </li>
+                            <li class="slide">
+                                <img src="./assets/ProjectScreen/Restaurant/resto2.png" alt="site restaurant image2">
+                            </li>
+                            <li class="slide">
+                                <img src="./assets/ProjectScreen/Restaurant/resto3.png" alt="site restaurant image3">
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    <a href="https://gnsplace.netlify.app/#awards" target="_blank" class="btn btn-project-link-geritch" id="btn-project-link">Consulter le site</a>
+                </div>
+            </div>
+
+
+            <div class=" workBx workBx1" data-modal-target="#modal-GNShop">
                 <h1>GN Shop</h1>
             </div>
             <div class="modal" id="modal-GNShop">
@@ -70,7 +137,7 @@
                     <button data-close-button class="close-button">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <p class="modal-body-texte-GNShop">Un site e-commerce creer avec <strong> React et commerce.js</strong>! <br> Vendez et achetez vos produits partout dans le monde en quelques clics</p>
+                    <p class="modal-body-texte-GNShop">Un site e-commerce créé avec <strong> React et commerce.js</strong>! <br> Vendez et achetez vos produits partout dans le monde en quelques clics</p>
                     <div class="carousel" data-carousel>
                         <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
                         <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
@@ -90,7 +157,7 @@
                 </div>
             </div>
 
-            <div class=" workBx workBx1" data-modal-target="#modal-LazyBeast">
+            <div class=" workBx workBx2" data-modal-target="#modal-LazyBeast">
                 <h1>Lazy Beast Network</h1>
             </div>
             <div class="modal" id="modal-LazyBeast">
@@ -100,8 +167,8 @@
                 </div>
                 <div class="modal-body">
                     <p class="modal-body-texte-LazyBeast">Un réseau social créé avec<strong> Node js, React, express et
-                            MongoDB</strong>! <br> Partager vos
-                        humeur, photos, video et lien avec vos followers</p>
+                            MongoDB</strong>! <br> Partagez vos
+                        humeurs, photos, videos et liens avec vos followers</p>
                     <div class="carousel" data-carousel>
                         <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
                         <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
@@ -117,13 +184,13 @@
                             </li>
                         </ul>
                     </div>
-                    <a href="https://lazybeastnetwork.netlify.app/" target="_blank" class="btn btn-project-link-LazyBeast">Consulter le site</a>
+                    <a href="https://xenodochial-ride-81d228.netlify.app/" target="_blank" class="btn btn-project-link-LazyBeast">Consulter le site</a>
                 </div>
             </div>
 
 
 
-            <div class="workBx workBx2" data-modal-target="#modal-cineApp">
+            <div class="workBx workBx3" data-modal-target="#modal-cineApp">
                 <h1>CineFiles</h1>
             </div>
             <div class="modal" id="modal-cineApp">
@@ -132,7 +199,7 @@
                     <button data-close-button class="close-button">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <p class="modal-body-texte-cineApp">Une application web  créeé avec<strong> React et l'API TMDB </strong>! <br> Recherchez des films part mot clés et creer une liste de vos coup de coeur a regarder</p>
+                    <p class="modal-body-texte-cineApp">Une application web créée avec<strong> React et l'API TMDB </strong>! <br> Recherchez des films part mot clés et créez une liste de vos coups de coeur à regarder</p>
                     <div class="carousel" data-carousel>
                         <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
                         <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
@@ -154,7 +221,7 @@
 
 
 
-            <div class="workBx workBx3" data-modal-target="#modal-bookApp">
+            <div class="workBx workBx4 hide" data-modal-target="#modal-bookApp">
                 <h1>FreeBrary</h1>
             </div>
             <div class="modal" id="modal-bookApp">
@@ -163,7 +230,7 @@
                     <button data-close-button class="close-button">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <p class="modal-body-texte-bookApp">Une application web créé avec<strong> Node js, express et MongoDB et Ejs</strong>! <br> Créez votre librairie et triez vos livres facilement</p>
+                    <p class="modal-body-texte-bookApp">Une application web créée avec<strong> Node js, express et MongoDB et Ejs</strong>! <br> Créez votre librairie et triez vos livres facilement</p>
                     <div class="carousel" data-carousel>
                         <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
                         <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
@@ -189,7 +256,7 @@
 
 
 
-            <div class="workBx workBx4 hide" data-modal-target="#modal-Flag">
+            <div class="workBx workBx5 hide" data-modal-target="#modal-Flag">
                 <h1>WorldFlag</h1>
             </div>
             <div class="modal" id="modal-Flag">
@@ -198,7 +265,7 @@
                     <button data-close-button class="close-button">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <p class="modal-body-texte-flagApp">Une application web créeé avec<strong> React et l'API Rest Countries </strong>! <br> Decouvrez les drapeau de chaque pays grace a cette application dynamique </p>
+                    <p class="modal-body-texte-flagApp">Une application web créée avec<strong> React et l'API Rest Countries </strong>! <br> Découvrez les drapeaux de chaque pays grâce à cette application dynamique </p>
                     <div class="carousel" data-carousel>
                         <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
                         <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
@@ -220,7 +287,7 @@
 
 
 
-            <div class="workBx workBx5 hide" data-modal-target="#modal-FaceRecognition">
+            <div class="workBx workBx6 hide" data-modal-target="#modal-FaceRecognition">
                 <h1>Face Recognition</h1>
             </div>
             <div class="modal" id="modal-FaceRecognition">
@@ -229,7 +296,7 @@
                     <button data-close-button class="close-button">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <p class="modal-body-texte-flagApp">Une application web crée avec <strong> Javascript </strong>! <br>Activer votre camera pour laisser l'inteligence artificiel detecter votre visage et votre humeur!</p>
+                    <p class="modal-body-texte-flagApp">Une application web créée avec <strong> Javascript </strong>! <br>Activez votre caméra pour laisser l'intéligence artificielle détecter votre visage et votre humeur!</p>
                     <div class="carousel" data-carousel>
                     <!--     <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
                         <button class="carousel-button next" data-carousel-button="next">&#8658;</button> -->
@@ -246,7 +313,7 @@
 
 
 
-            <div class="workBx workBx6 hide" data-modal-target="#modal-piano">
+            <div class="workBx workBx7 hide" data-modal-target="#modal-piano">
                 <h1>Piano Script</h1>
             </div>
             <div class="modal" id="modal-piano">
@@ -255,7 +322,7 @@
                     <button data-close-button class="close-button">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <p class="modal-body-texte-flagApp">Un piano entierement creer avec <strong> Javascript </strong>! <br> Chi va piano va sano e va lontano.
+                    <p class="modal-body-texte-flagApp">Un piano entièrement créé avec <strong> Javascript </strong>! <br> Chi va piano va sano e va lontano.
                         </p>
                     <div class="carousel" data-carousel>
                         <!-- <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
@@ -273,7 +340,7 @@
 
             
 
-            <div id="workBx7"  class="workBx workBx7 hide" data-modal-target="#modal-badCitizen">
+            <div id="workBx8"  class="workBx workBx8 hide" data-modal-target="#modal-badCitizen">
                 <h1>Bad Citizen</h1>
             </div>
             <div class="modal" id="modal-badCitizen">
@@ -282,7 +349,7 @@
                     <button data-close-button class="close-button">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <p class="modal-body-texte-flagApp">Un petit jeux creeer avec <strong> Javascript </strong>! <br> Affronter des enemis,gerer vos point de vie pour aller le plus loin possible !!</p>
+                    <p class="modal-body-texte-flagApp">Un petit jeux créé avec <strong> Javascript </strong>! <br> Affrontez des enemis, gérez vos points de vie pour aller le plus loin possible !!</p>
                     <div class="carousel" data-carousel>
                         <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
                         <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
@@ -302,7 +369,7 @@
 
 
 
-            <div id="workBx8" class="workBx workBx8 hide" data-modal-target="#modal-tictac">
+            <div id="workBx8" class="workBx workBx9 hide" data-modal-target="#modal-tictac">
                 <h1>Tic Tac Toe</h1>
             </div>
             <div class="modal" id="modal-tictac">
@@ -311,7 +378,7 @@
                     <button data-close-button class="close-button">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <p class="modal-body-texte-tictac">Un simple jeu du morpion creer avec <strong> Html Css et Javascript  </strong>! <br> jouer avec un partenaire au celebre jeux du morpion, qui sera le grand gagnant ? </p>
+                    <p class="modal-body-texte-tictac">Un simple jeu du morpion créé avec <strong> Html Css et Javascript  </strong>! <br> jouez avec un partenaire au celebre jeux du morpion, qui sera le grand gagnant ? </p>
                     <div class="carousel" data-carousel>
                         <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
                         <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
@@ -329,35 +396,7 @@
                 </div>
             </div>
 
-            <div id="workBx9"  class="workBx workBx9 hide" data-modal-target="#modal-orleans">
-                <h1>Orléans</h1>
-            </div>
-            <div class="modal" id="modal-orleans">
-                <div class="modal-header">
-                    <div class="title">Orléans <i class="devicon-javascript-plain"></i><i class="devicon-bootstrap-plain"></i></div>
-                    <button data-close-button class="close-button">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <p class="modal-body-texte-orleans">Proposition de site vitrine créer avec <strong> html, CSS, BootStrap et Javascript </strong>! <br> pour la ville d'Orléans</p>
-                    <div class="carousel" data-carousel>
-                        <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
-                        <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
-                        <ul data-slides>
-                            <li class="slide" data-active>
-                                <img src="./assets/ProjectScreen/Orleans/orleans1.png" alt="Nature Image #1">
-                            </li>
-                            <li class="slide">
-                                <img src="./assets/ProjectScreen/Orleans/orleans2.png" alt="Nature Image #2">
-                            </li>
-                            <li class="slide">
-                                <img src="./assets/ProjectScreen/Orleans/orleans3.png" alt="Nature Image #2">
-                            </li>
-                            
-                        </ul>
-                    </div>
-                    <a href="https://www.gregoryneault.fr/Orleans/" target="_blank" class="btn btn-project-link-Orleans" id="btn-project-link">Consulter le site</a>
-                </div>
-            </div>
+         
 
 
         </div>

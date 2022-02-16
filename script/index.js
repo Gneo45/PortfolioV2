@@ -17,6 +17,8 @@ const developeur = document.querySelector(".Developeur");
 const aboutMeBtn = document.getElementById("about-me-btn");
 const downloadResumeBtn = document.getElementById("download-resume-btn");
 const workTitle = document.querySelector(".work-title");
+
+const modalTextGeritch = document.querySelector(".modal-body-texte-geritch")
 const modalTextGnShop = document.querySelector(".modal-body-texte-GNShop");
 const modalTextLazyBeast = document.querySelector(
   ".modal-body-texte-LazyBeast"
@@ -26,6 +28,7 @@ const modalTextCineApp = document.querySelector(".modal-body-texte-cineApp");
 const modalTextBookApp = document.querySelector(".modal-body-texte-bookApp");
 const modalTextFlagApp = document.querySelector(".modal-body-texte-flagApp");
 
+const btnProjectLinkGeritch = document.querySelector(".btn-project-link-geritch");
 const btnProjectLinkGNshop = document.querySelector(".btn-project-link-GNshop");
 
 const btnProjectLinkLazyBeast = document.querySelector(
@@ -150,6 +153,10 @@ const languageVersion = {
     EN: "My last projects",
     FR: "Mes dernières réalisations",
   },
+  modalTextGeritch: {
+    EN: `Proposal for a showcase site created with <strong> React and css </strong>! <br>for a fictional restaurant</p>`,
+    FR: `Proposition de site vitrine créer avec <strong> React et css </strong>! <br> pour un restaurant fictif</p>`,
+  },
   modalTextEcommerce: {
     EN: `An e-commerce site created with <strong> React and commerce.js</strong>! <br> Sell and buy your products anywhere in the world in a few clicks</p>`,
     FR: `Un site e-commerce creer avec <strong> React et commerce.js</strong>! <br> Vendez et achetez vos produits partout dans le monde en quelques clics</p>`,
@@ -171,6 +178,10 @@ const languageVersion = {
   modalTextFlagApp: {
     EN: "my Resume",
     FR: "mon Cv",
+  },
+  btnProjectLinkGeritch: {
+    EN: "Visit website",
+    FR: "Consulter le site",
   },
   btnProjectLinkGNshop: {
     EN: "Visit website",
@@ -208,10 +219,7 @@ const languageVersion = {
    EN: "Visit website",
     FR: "Consulter le site",
   },
-  btnProjectLinkOrleans: {
-    EN: "Visit website",
-    FR: "Consulter le site",
-  },
+
   btnSeeMore: {
     EN: "See more",
     FR: "En voir plus"
@@ -438,7 +446,8 @@ function changelanguageToEng() {
   btnProjectLinkPiano.innerHTML = languageVersion.btnProjectLinkPiano.EN;
   btnProjectLinkBadCitizen.innerHTML = languageVersion.btnProjectLinkBadCitizen.EN;
   btnProjectLinkTicTacToe.innerHTML = languageVersion.btnProjectLinkTicTacToe.EN;
-  btnProjectLinkOrleans.innerHTML = languageVersion.btnProjectLinkOrleans.EN;
+
+  btnProjectLinkGeritch.innerHTML = languageVersion.btnProjectLinkGeritch.EN;
 
   btnSeeMore.innerHTML = languageVersion.btnSeeMore.EN;
 
@@ -446,6 +455,7 @@ function changelanguageToEng() {
   developeur.innerHTML = languageVersion.developeur.EN;
 
   workTitle.innerHTML = languageVersion.workTitle.EN;
+  modalTextGeritch.innerHTML = languageVersion.modalTextGeritch.EN;
   modalTextGnShop.innerHTML = languageVersion.modalTextEcommerce.EN;
 
   modalTextLazyBeast.innerHTML = languageVersion.modalTextLazyBeast.EN;
@@ -490,6 +500,9 @@ function changelanguageToFR() {
   aboutMeBtn.innerHTML = languageVersion.aboutMeBtn.FR;
   downloadResumeBtn.innerHTML = languageVersion.downloadResumeBtn.FR;
   workTitle.innerHTML = languageVersion.workTitle.FR;
+
+  modalTextGeritch.innerHTML = languageVersion.modalTextGeritch.FR;
+
   modalTextGnShop.innerHTML = languageVersion.modalTextEcommerce.FR;
 
   modalTextLazyBeast.innerHTML = languageVersion.modalTextLazyBeast.FR;
@@ -497,6 +510,7 @@ function changelanguageToFR() {
   modalTextBookApp.innerHTML = languageVersion.modalTextBookApp.FR;
   modalTextFlagApp.innerHTML = languageVersion.modalTextFlagApp.FR;
 
+  btnProjectLinkGeritch.innerHTML = languageVersion.btnProjectLinkGeritch.FR;
   btnProjectLinkGNshop.innerHTML = languageVersion.btnProjectLinkGNshop.FR;
   btnProjectLinkLazyBeast.innerHTML = languageVersion.btnProjectLinkLazyBeast.FR;
   btnProjectLinkLazyBeast.innerHTML = languageVersion.btnProjectLinkLazyBeast.FR;
@@ -507,7 +521,7 @@ function changelanguageToFR() {
   btnProjectLinkPiano.innerHTML = languageVersion.btnProjectLinkPiano.FR;
   btnProjectLinkBadCitizen.innerHTML = languageVersion.btnProjectLinkBadCitizen.FR;
   btnProjectLinkTicTacToe.innerHTML = languageVersion.btnProjectLinkTicTacToe.FR;
-  btnProjectLinkOrleans.innerHTML = languageVersion.btnProjectLinkOrleans.FR;
+
 
   btnSeeMore.innerHTML = languageVersion.btnSeeMore.FR;
 
