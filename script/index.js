@@ -18,6 +18,9 @@ const aboutMeBtn = document.getElementById("about-me-btn");
 const downloadResumeBtn = document.getElementById("download-resume-btn");
 const workTitle = document.querySelector(".work-title");
 
+const modalTextPager = document.querySelector(".modal-body-texte-pager")
+
+
 const modalTextGeritch = document.querySelector(".modal-body-texte-geritch")
 const modalTextGnShop = document.querySelector(".modal-body-texte-GNShop");
 const modalTextLazyBeast = document.querySelector(
@@ -44,6 +47,11 @@ const btnProjectLinkBookApp = document.querySelector(
 
 const btnProjectLinkFlagApp = document.querySelector(
   ".btn-project-link-FlagApp"
+);
+
+
+const btnProjectLinkPager = document.querySelector(
+  ".btn-project-link-pager"
 );
 
 
@@ -102,6 +110,7 @@ const changeLanguageBtnToEN = document.querySelector(".change-language-btn-EN");
 const changeLanguageBtnToFR = document.querySelector(".change-language-btn-FR");
 
 const btnSeeMore = document.querySelector(".see-more");
+const workBx3 = document.querySelector(".workBx3");
 const workBx4 = document.querySelector(".workBx4");
 const workBx5 = document.querySelector(".workBx5");
 const workBx6 = document.querySelector(".workBx6");
@@ -152,6 +161,11 @@ const languageVersion = {
   workTitle: {
     EN: "My last projects",
     FR: "Mes dernières réalisations",
+  },
+  modalTextPager: {
+    EN: `
+    Web messaging app built with <strong>React, Node, Stream.io and Twilo</strong>! <br>Send messages, gifs, photos, and more. Test app with login "visitor" Password "visitor" </p>`,
+    FR: `Web app de messagerie créée avec <strong> React, Node, Stream.io et Twilo </strong>! <br>Envoyez des message, gifs, photos, et plus encore. Testez l'application avec le pseudo "visiteur" Mot de passe "visiteur" </p>`,
   },
   modalTextGeritch: {
     EN: `Proposal for a showcase site created with <strong> React and css </strong>! <br>for a fictional restaurant</p>`,
@@ -349,6 +363,7 @@ changeLanguageBtnToFR.addEventListener("click", () => {
 console.log(workBx5);
 
 btnSeeMore.addEventListener("click", () => {
+  workBx3.classList.remove("hide");
   workBx4.classList.remove("hide");
   workBx5.classList.remove("hide");
   workBx6.classList.remove("hide");
@@ -436,8 +451,10 @@ function changelanguageToEng() {
 
   downloadResumeBtn.innerHTML = languageVersion.downloadResumeBtn.EN;
   aboutMeBtn.innerHTML = languageVersion.aboutMeBtn.EN;
+
+  btnProjectLinkPager.innerHTML = languageVersion.btnProjectLinkGeritch.EN;
+  btnProjectLinkGeritch.innerHTML = languageVersion.btnProjectLinkGeritch.EN;
   btnProjectLinkGNshop.innerHTML = languageVersion.btnProjectLinkGNshop.EN;
-  btnProjectLinkLazyBeast.innerHTML = languageVersion.btnProjectLinkLazyBeast.EN;
   btnProjectLinkLazyBeast.innerHTML = languageVersion.btnProjectLinkLazyBeast.EN;
   btnProjectLinkCineApp.innerHTML = languageVersion.btnProjectLinkCineApp.EN;
   btnProjectLinkBookApp.innerHTML = languageVersion.btnProjectLinkBookApp.EN;
@@ -447,7 +464,6 @@ function changelanguageToEng() {
   btnProjectLinkBadCitizen.innerHTML = languageVersion.btnProjectLinkBadCitizen.EN;
   btnProjectLinkTicTacToe.innerHTML = languageVersion.btnProjectLinkTicTacToe.EN;
 
-  btnProjectLinkGeritch.innerHTML = languageVersion.btnProjectLinkGeritch.EN;
 
   btnSeeMore.innerHTML = languageVersion.btnSeeMore.EN;
 
@@ -455,6 +471,8 @@ function changelanguageToEng() {
   developeur.innerHTML = languageVersion.developeur.EN;
 
   workTitle.innerHTML = languageVersion.workTitle.EN;
+  modalTextPager.innerHTML = languageVersion.modalTextPager.EN;
+
   modalTextGeritch.innerHTML = languageVersion.modalTextGeritch.EN;
   modalTextGnShop.innerHTML = languageVersion.modalTextEcommerce.EN;
 
@@ -478,8 +496,8 @@ function changelanguageToEng() {
   textContenu.innerHTML = languageVersion.textContenu.EN;
   titleCommerce.innerHTML = languageVersion.titleCommerce.EN;
   textCommerce.innerHTML = languageVersion.textCommerce.EN;
+  
   titleFormContact.innerHTML = languageVersion.titleFormContact.EN;
-
   formAdresse.innerHTML = languageVersion.formAdresse.EN;
   formPhone.innerHTML = languageVersion.formPhone.EN;
   btnSendForm.innerHTML = languageVersion.btnSendForm.EN;
@@ -500,6 +518,7 @@ function changelanguageToFR() {
   aboutMeBtn.innerHTML = languageVersion.aboutMeBtn.FR;
   downloadResumeBtn.innerHTML = languageVersion.downloadResumeBtn.FR;
   workTitle.innerHTML = languageVersion.workTitle.FR;
+  modalTextPager.innerHTML = languageVersion.modalTextPager.FR;
 
   modalTextGeritch.innerHTML = languageVersion.modalTextGeritch.FR;
 
@@ -510,6 +529,7 @@ function changelanguageToFR() {
   modalTextBookApp.innerHTML = languageVersion.modalTextBookApp.FR;
   modalTextFlagApp.innerHTML = languageVersion.modalTextFlagApp.FR;
 
+  btnProjectLinkPager.innerHTML = languageVersion.btnProjectLinkGeritch.FR;
   btnProjectLinkGeritch.innerHTML = languageVersion.btnProjectLinkGeritch.FR;
   btnProjectLinkGNshop.innerHTML = languageVersion.btnProjectLinkGNshop.FR;
   btnProjectLinkLazyBeast.innerHTML = languageVersion.btnProjectLinkLazyBeast.FR;
