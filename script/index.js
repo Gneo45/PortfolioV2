@@ -18,20 +18,25 @@ const aboutMeBtn = document.getElementById("about-me-btn");
 const downloadResumeBtn = document.getElementById("download-resume-btn");
 const workTitle = document.querySelector(".work-title");
 
-const modalTextPager = document.querySelector(".modal-body-texte-pager")
-
-
-const modalTextGeritch = document.querySelector(".modal-body-texte-geritch")
+const modalTextPager = document.querySelector(".modal-body-texte-pager");
+const modalTextGeritch = document.querySelector(".modal-body-texte-geritch");
 const modalTextGnShop = document.querySelector(".modal-body-texte-GNShop");
 const modalTextLazyBeast = document.querySelector(
   ".modal-body-texte-LazyBeast"
 );
-
 const modalTextCineApp = document.querySelector(".modal-body-texte-cineApp");
+const modalTextPiano = document.querySelector(".modal-body-texte-piano");
 const modalTextBookApp = document.querySelector(".modal-body-texte-bookApp");
+const modalTextTicTacToe= document.querySelector(".modal-body-texte-tictac");
+const modalTextFaceDetection = document.querySelector(".modal-body-texte-FaceRecognition");
 const modalTextFlagApp = document.querySelector(".modal-body-texte-flagApp");
+const modalTextBadCitizen = document.querySelector(
+  ".modal-body-texte-badCitizen"
+);
 
-const btnProjectLinkGeritch = document.querySelector(".btn-project-link-geritch");
+const btnProjectLinkGeritch = document.querySelector(
+  ".btn-project-link-geritch"
+);
 const btnProjectLinkGNshop = document.querySelector(".btn-project-link-GNshop");
 
 const btnProjectLinkLazyBeast = document.querySelector(
@@ -49,11 +54,7 @@ const btnProjectLinkFlagApp = document.querySelector(
   ".btn-project-link-FlagApp"
 );
 
-
-const btnProjectLinkPager = document.querySelector(
-  ".btn-project-link-pager"
-);
-
+const btnProjectLinkPager = document.querySelector(".btn-project-link-pager");
 
 const btnProjectLinkFaceDetection = document.querySelector(
   ".btn-project-link-FaceDetection"
@@ -182,16 +183,49 @@ const languageVersion = {
         humeur, photos, video et lien avec vos followers</p>`,
   },
   modalTextCineApp: {
-    EN: "my Resume",
-    FR: "mon Cv",
+    EN: `
+    A web application created with <strong> React and the TMDB API</strong>! <br> Search for movies by keywords and create a list of your favorites atwatch</p>`,
+    FR: `Une application web créée avec<strong> React et l'API TMDB
+    </strong>! <br> Recherchez des films part mot clés et créez une liste de vos coups de coeur à
+    regarder</p>`,
   },
   modalTextBookApp: {
-    EN: "my Resume",
-    FR: "mon Cv",
+    EN: `
+    A web application created with <strong> Node js, express and MongoDB and Ejs</strong>! <br> Create your library and sort your books easily</p>`,
+    FR: `Une application web créée avec<strong> Node js, express et
+    MongoDB et Ejs</strong>! <br> Créez votre librairie et triez vos livres facilement</p>`,
   },
   modalTextFlagApp: {
-    EN: "my Resume",
-    FR: "mon Cv",
+    EN: `A web application created with <strong> React and the Rest API
+    Countries </strong>! <br> Discover the flags of each country through this application
+dynamic </p>`,
+    FR: `Une application web créée avec<strong> React et l'API Rest
+    Countries </strong>! <br> Découvrez les drapeaux de chaque pays grâce à cette application
+dynamique </p>`,
+  },
+  modalTextFaceDetection: {
+    EN: ` A web application created with <strong>Javascript</strong>!<br>Activate your camera to let the artificial intelligence detect your face and your mood!</p>`,
+    FR: `Une application web créée avec <strong> Javascript </strong>!
+    <br>Activez votre caméra pour laisser l'intéligence artificielle détecter votre visage et votre
+    humeur!
+</p>`,
+  },
+  modalTextPiano: {
+    EN: `A piano entirely created with <strong>Javascript</strong>!<br> Chi va piano va sano e va lontano.</p>`,
+    FR: `Un piano entièrement créé avec <strong> Javascript </strong>!
+    <br> Chi va piano va sano e va lontano.</p>`,
+  },
+  modalTextBadCitizen: {
+    EN: `A small game created with <strong>Javascript</strong>! <br> Face enemies, manage your life points to go as far as possible!!</p>`,
+    FR: `Un petit jeux créé avec <strong> Javascript </strong>! <br>
+    Affrontez des enemis, gérez vos points de vie pour aller le plus loin possible !!</p>`,
+  },
+  modalTextTicTacToe: {
+    EN: `
+    A simple Tic Tac Toe game created with <strong> Html Css and JavaScript </strong>! <br> play the famous Tic Tac Toe game with a partner, who will be the big winner? </p>`,
+    FR: `Un simple jeu du morpion créé avec <strong> Html Css et
+    Javascript </strong>! <br> jouez avec un partenaire au celebre jeux du morpion, qui sera le
+grand gagnant ? </p>`,
   },
   btnProjectLinkGeritch: {
     EN: "Visit website",
@@ -206,11 +240,11 @@ const languageVersion = {
     FR: "Consulter le site",
   },
   btnProjectLinkCineApp: {
-   EN: "Visit website",
+    EN: "Visit website",
     FR: "Consulter le site",
   },
   btnProjectLinkBookApp: {
-   EN: "Visit website",
+    EN: "Visit website",
     FR: "Consulter le site",
   },
   btnProjectLinkFlagApp: {
@@ -222,7 +256,7 @@ const languageVersion = {
     FR: "Consulter le site",
   },
   btnProjectLinkPiano: {
-   EN: "Visit website",
+    EN: "Visit website",
     FR: "Consulter le site",
   },
   btnProjectLinkBadCitizen: {
@@ -230,13 +264,13 @@ const languageVersion = {
     FR: "Consulter le site",
   },
   btnProjectLinkTicTacToe: {
-   EN: "Visit website",
+    EN: "Visit website",
     FR: "Consulter le site",
   },
 
   btnSeeMore: {
     EN: "See more",
-    FR: "En voir plus"
+    FR: "En voir plus",
   },
   titleAboutMe: {
     EN: "About me",
@@ -455,15 +489,18 @@ function changelanguageToEng() {
   btnProjectLinkPager.innerHTML = languageVersion.btnProjectLinkGeritch.EN;
   btnProjectLinkGeritch.innerHTML = languageVersion.btnProjectLinkGeritch.EN;
   btnProjectLinkGNshop.innerHTML = languageVersion.btnProjectLinkGNshop.EN;
-  btnProjectLinkLazyBeast.innerHTML = languageVersion.btnProjectLinkLazyBeast.EN;
+  btnProjectLinkLazyBeast.innerHTML =
+    languageVersion.btnProjectLinkLazyBeast.EN;
   btnProjectLinkCineApp.innerHTML = languageVersion.btnProjectLinkCineApp.EN;
   btnProjectLinkBookApp.innerHTML = languageVersion.btnProjectLinkBookApp.EN;
   btnProjectLinkFlagApp.innerHTML = languageVersion.btnProjectLinkFlagApp.EN;
-  btnProjectLinkFaceDetection.innerHTML = languageVersion.btnProjectLinkFaceDetection.EN;
+  btnProjectLinkFaceDetection.innerHTML =
+    languageVersion.btnProjectLinkFaceDetection.EN;
   btnProjectLinkPiano.innerHTML = languageVersion.btnProjectLinkPiano.EN;
-  btnProjectLinkBadCitizen.innerHTML = languageVersion.btnProjectLinkBadCitizen.EN;
-  btnProjectLinkTicTacToe.innerHTML = languageVersion.btnProjectLinkTicTacToe.EN;
-
+  btnProjectLinkBadCitizen.innerHTML =
+    languageVersion.btnProjectLinkBadCitizen.EN;
+  btnProjectLinkTicTacToe.innerHTML =
+    languageVersion.btnProjectLinkTicTacToe.EN;
 
   btnSeeMore.innerHTML = languageVersion.btnSeeMore.EN;
 
@@ -471,15 +508,20 @@ function changelanguageToEng() {
   developeur.innerHTML = languageVersion.developeur.EN;
 
   workTitle.innerHTML = languageVersion.workTitle.EN;
-  modalTextPager.innerHTML = languageVersion.modalTextPager.EN;
 
+  modalTextPager.innerHTML = languageVersion.modalTextPager.EN;
   modalTextGeritch.innerHTML = languageVersion.modalTextGeritch.EN;
   modalTextGnShop.innerHTML = languageVersion.modalTextEcommerce.EN;
-
   modalTextLazyBeast.innerHTML = languageVersion.modalTextLazyBeast.EN;
   modalTextCineApp.innerHTML = languageVersion.modalTextCineApp.EN;
   modalTextBookApp.innerHTML = languageVersion.modalTextBookApp.EN;
   modalTextFlagApp.innerHTML = languageVersion.modalTextFlagApp.EN;
+  modalTextFaceDetection.innerHTML = languageVersion.modalTextFaceDetection.EN;
+  modalTextPiano.innerHTML = languageVersion.modalTextPiano.EN;
+  modalTextTicTacToe.innerHTML = languageVersion.modalTextTicTacToe.EN;
+  modalTextBadCitizen.innerHTML = languageVersion.modalTextBadCitizen.EN;
+
+  
 
   titleAboutMe.innerHTML = languageVersion.titleAboutMe.EN;
   textAboutMe.innerHTML = languageVersion.textAboutMe.EN;
@@ -496,7 +538,7 @@ function changelanguageToEng() {
   textContenu.innerHTML = languageVersion.textContenu.EN;
   titleCommerce.innerHTML = languageVersion.titleCommerce.EN;
   textCommerce.innerHTML = languageVersion.textCommerce.EN;
-  
+
   titleFormContact.innerHTML = languageVersion.titleFormContact.EN;
   formAdresse.innerHTML = languageVersion.formAdresse.EN;
   formPhone.innerHTML = languageVersion.formPhone.EN;
@@ -518,34 +560,38 @@ function changelanguageToFR() {
   aboutMeBtn.innerHTML = languageVersion.aboutMeBtn.FR;
   downloadResumeBtn.innerHTML = languageVersion.downloadResumeBtn.FR;
   workTitle.innerHTML = languageVersion.workTitle.FR;
+
   modalTextPager.innerHTML = languageVersion.modalTextPager.FR;
-
   modalTextGeritch.innerHTML = languageVersion.modalTextGeritch.FR;
-
   modalTextGnShop.innerHTML = languageVersion.modalTextEcommerce.FR;
-
   modalTextLazyBeast.innerHTML = languageVersion.modalTextLazyBeast.FR;
   modalTextCineApp.innerHTML = languageVersion.modalTextCineApp.FR;
   modalTextBookApp.innerHTML = languageVersion.modalTextBookApp.FR;
   modalTextFlagApp.innerHTML = languageVersion.modalTextFlagApp.FR;
+  modalTextFaceDetection.innerHTML = languageVersion.modalTextFaceDetection.FR;
+  modalTextPiano.innerHTML = languageVersion.modalTextPiano.FR;
+  modalTextTicTacToe.innerHTML = languageVersion.modalTextTicTacToe.FR;
+  modalTextBadCitizen.innerHTML = languageVersion.modalTextBadCitizen.FR;
 
   btnProjectLinkPager.innerHTML = languageVersion.btnProjectLinkGeritch.FR;
   btnProjectLinkGeritch.innerHTML = languageVersion.btnProjectLinkGeritch.FR;
   btnProjectLinkGNshop.innerHTML = languageVersion.btnProjectLinkGNshop.FR;
-  btnProjectLinkLazyBeast.innerHTML = languageVersion.btnProjectLinkLazyBeast.FR;
-  btnProjectLinkLazyBeast.innerHTML = languageVersion.btnProjectLinkLazyBeast.FR;
+  btnProjectLinkLazyBeast.innerHTML =
+    languageVersion.btnProjectLinkLazyBeast.FR;
+  btnProjectLinkLazyBeast.innerHTML =
+    languageVersion.btnProjectLinkLazyBeast.FR;
   btnProjectLinkCineApp.innerHTML = languageVersion.btnProjectLinkCineApp.FR;
   btnProjectLinkBookApp.innerHTML = languageVersion.btnProjectLinkBookApp.FR;
   btnProjectLinkFlagApp.innerHTML = languageVersion.btnProjectLinkFlagApp.FR;
-  btnProjectLinkFaceDetection.innerHTML = languageVersion.btnProjectLinkFaceDetection.FR;
+  btnProjectLinkFaceDetection.innerHTML =
+    languageVersion.btnProjectLinkFaceDetection.FR;
   btnProjectLinkPiano.innerHTML = languageVersion.btnProjectLinkPiano.FR;
-  btnProjectLinkBadCitizen.innerHTML = languageVersion.btnProjectLinkBadCitizen.FR;
-  btnProjectLinkTicTacToe.innerHTML = languageVersion.btnProjectLinkTicTacToe.FR;
-
+  btnProjectLinkBadCitizen.innerHTML =
+    languageVersion.btnProjectLinkBadCitizen.FR;
+  btnProjectLinkTicTacToe.innerHTML =
+    languageVersion.btnProjectLinkTicTacToe.FR;
 
   btnSeeMore.innerHTML = languageVersion.btnSeeMore.FR;
-
-
 
   titleAboutMe.innerHTML = languageVersion.titleAboutMe.FR;
   textAboutMe.innerHTML = languageVersion.textAboutMe.FR;
