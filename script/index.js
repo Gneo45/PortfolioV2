@@ -4,6 +4,14 @@ const overlay = document.getElementById("overlay");
 const modalTriggers = document.querySelectorAll(".workBx");
 const buttons = document.querySelectorAll("[data-carousel-button]");
 
+const longBnts = document.querySelectorAll(".longBtn");
+
+const roundBtn = document.querySelectorAll(".round-btn");
+const LogoA = document.querySelector(".logo")
+const boxs = document.querySelectorAll(".box")
+const animationWidth = getComputedStyle(document.documentElement)
+.getPropertyValue('--animation-end-width');
+
 /*TRADUCTION SYSTEM */
 
 const navLinkHome = document.querySelector(".nav-link-home");
@@ -17,7 +25,8 @@ const developeur = document.querySelector(".Developeur");
 const aboutMeBtn = document.getElementById("about-me-btn");
 const downloadResumeBtn = document.getElementById("download-resume-btn");
 const workTitle = document.querySelector(".work-title");
-
+const modalTextDisney= document.querySelector(".modal-body-texte-disney");
+const modalTextTesla = document.querySelector(".modal-body-texte-tesla");
 const modalTextPager = document.querySelector(".modal-body-texte-pager");
 const modalTextGeritch = document.querySelector(".modal-body-texte-geritch");
 const modalTextGnShop = document.querySelector(".modal-body-texte-GNShop");
@@ -27,50 +36,19 @@ const modalTextLazyBeast = document.querySelector(
 const modalTextCineApp = document.querySelector(".modal-body-texte-cineApp");
 const modalTextPiano = document.querySelector(".modal-body-texte-piano");
 const modalTextBookApp = document.querySelector(".modal-body-texte-bookApp");
-const modalTextTicTacToe= document.querySelector(".modal-body-texte-tictac");
-const modalTextFaceDetection = document.querySelector(".modal-body-texte-FaceRecognition");
+const modalTextTicTacToe = document.querySelector(".modal-body-texte-tictac");
+const modalTextFaceDetection = document.querySelector(
+  ".modal-body-texte-FaceRecognition"
+);
 const modalTextFlagApp = document.querySelector(".modal-body-texte-flagApp");
 const modalTextBadCitizen = document.querySelector(
   ".modal-body-texte-badCitizen"
 );
 
-const btnProjectLinkGeritch = document.querySelector(
-  ".btn-project-link-geritch"
-);
-const btnProjectLinkGNshop = document.querySelector(".btn-project-link-GNshop");
-
-const btnProjectLinkLazyBeast = document.querySelector(
-  ".btn-project-link-LazyBeast"
+const btnProjectLinkWebsite= document.querySelectorAll(
+  ".btn-project-link-website"
 );
 
-const btnProjectLinkCineApp = document.querySelector(
-  ".btn-project-link-CineApp"
-);
-const btnProjectLinkBookApp = document.querySelector(
-  ".btn-project-link-BookApp"
-);
-
-const btnProjectLinkFlagApp = document.querySelector(
-  ".btn-project-link-FlagApp"
-);
-
-const btnProjectLinkPager = document.querySelector(".btn-project-link-pager");
-
-const btnProjectLinkFaceDetection = document.querySelector(
-  ".btn-project-link-FaceDetection"
-);
-const btnProjectLinkPiano = document.querySelector(".btn-project-link-Piano");
-
-const btnProjectLinkBadCitizen = document.querySelector(
-  ".btn-project-link-BadCitizen"
-);
-
-const btnProjectLinkTicTacToe = document.querySelector(
-  ".btn-project-link-TicTacToe"
-);
-const btnProjectLinkOrleans = document.querySelector(
-  ".btn-project-link-Orleans"
-);
 
 const titleAboutMe = document.querySelector(".title-about-me");
 const textAboutMe = document.querySelector(".text-about-me");
@@ -101,7 +79,8 @@ const titleFormInformations = document.querySelector(
 );
 const formAdresse = document.querySelector(".adresse");
 const formPhone = document.querySelector(".phone");
-const btnSendForm = document.querySelector(".btn-send-form");
+const btnSendForm = document.getElementById("btn-send-form");
+
 
 const inputFormName = document.querySelector(".input-form-name");
 const inputFormMail = document.querySelector(".input-form-mail");
@@ -111,6 +90,8 @@ const changeLanguageBtnToEN = document.querySelector(".change-language-btn-EN");
 const changeLanguageBtnToFR = document.querySelector(".change-language-btn-FR");
 
 const btnSeeMore = document.querySelector(".see-more");
+const workBx1 = document.querySelector(".workBx1");
+
 const workBx3 = document.querySelector(".workBx3");
 const workBx4 = document.querySelector(".workBx4");
 const workBx5 = document.querySelector(".workBx5");
@@ -119,7 +100,14 @@ const workBx7 = document.querySelector(".workBx7");
 const workBx8 = document.querySelector(".workBx8");
 const workBx9 = document.querySelector(".workBx9");
 
-console.log(workBx5);
+const header = document.querySelector("header");
+
+ const menuIcon = document.querySelectorAll(".menu-icon-png")
+ const longBtnAs = document.querySelectorAll(".long-btn-a")
+ const hamburgerMenu = document.querySelector(".toggle")
+ const ToggleMenuIcon = document.querySelector('.menu-icon')
+ const ToggleMenuCloseIcon = document.querySelector('.menu-close-icon')
+
 
 const languageVersion = {
   navLinkHome: {
@@ -162,10 +150,22 @@ const languageVersion = {
   workTitle: {
     EN: "My last projects",
     FR: "Mes dernières réalisations",
+  }, 
+   modalTextDisney: {
+    EN: `A DISNEY + Website clone created with <strong> React, redux and Firebase
+</strong>! <br>clean style and accessibility</p>`,
+    FR: `Un clone du site Disney + créé avec <strong> React, redux et
+    firebase </strong>! <br>un Style épuré moderne et accessible</p>`,
+  },
+  modalTextTesla: {
+    EN: `A TESLA  website clone created with <strong> React, and redux
+</strong>! <br>Design and simplicity, a guaranteed incredible user experience </p>`,
+    FR: `Un clone du superbe site Tesla créé avec  <strong> React, et redux
+    </strong>! <br>Design et simplicité, une experience utilisateur incroyable garantie </p>`,
   },
   modalTextPager: {
     EN: `
-    Web messaging app built with <strong>React, Node, Stream.io and Twilo</strong>! <br>Send messages, gifs, photos, and more. Test app with login "visitor" Password "visitor" </p>`,
+    WEB MESSAGING APP built with <strong>React, Node, Stream.io and Twilo</strong>! <br>Send messages, gifs, photos, and more. Test app with login "visitor" Password "visitor" </p>`,
     FR: `Web app de messagerie créée avec <strong> React, Node, Stream.io et Twilo </strong>! <br>Envoyez des message, gifs, photos, et plus encore. Testez l'application avec le pseudo "visiteur" Mot de passe "visiteur" </p>`,
   },
   modalTextGeritch: {
@@ -227,51 +227,11 @@ dynamique </p>`,
     Javascript </strong>! <br> jouez avec un partenaire au celebre jeux du morpion, qui sera le
 grand gagnant ? </p>`,
   },
-  btnProjectLinkGeritch: {
+  btnProjectLinkWebsite: {
     EN: "Visit website",
     FR: "Consulter le site",
   },
-  btnProjectLinkGNshop: {
-    EN: "Visit website",
-    FR: "Consulter le site",
-  },
-  btnProjectLinkLazyBeast: {
-    EN: "Visit website",
-    FR: "Consulter le site",
-  },
-  btnProjectLinkCineApp: {
-    EN: "Visit website",
-    FR: "Consulter le site",
-  },
-  btnProjectLinkBookApp: {
-    EN: "Visit website",
-    FR: "Consulter le site",
-  },
-  btnProjectLinkFlagApp: {
-    EN: "Visit website",
-    FR: "Consulter le site",
-  },
-  btnProjectLinkFaceDetection: {
-    EN: "Visit website",
-    FR: "Consulter le site",
-  },
-  btnProjectLinkPiano: {
-    EN: "Visit website",
-    FR: "Consulter le site",
-  },
-  btnProjectLinkBadCitizen: {
-    EN: "Visit website",
-    FR: "Consulter le site",
-  },
-  btnProjectLinkTicTacToe: {
-    EN: "Visit website",
-    FR: "Consulter le site",
-  },
-
-  btnSeeMore: {
-    EN: "See more",
-    FR: "En voir plus",
-  },
+ 
   titleAboutMe: {
     EN: "About me",
     FR: "A propos de moi",
@@ -394,30 +354,125 @@ changeLanguageBtnToEN.addEventListener("click", () => {
 changeLanguageBtnToFR.addEventListener("click", () => {
   changelanguageToFR();
 });
-console.log(workBx5);
 
-btnSeeMore.addEventListener("click", () => {
-  workBx3.classList.remove("hide");
-  workBx4.classList.remove("hide");
-  workBx5.classList.remove("hide");
-  workBx6.classList.remove("hide");
-  workBx7.classList.remove("hide");
-  workBx8.classList.remove("hide");
-  workBx9.classList.remove("hide");
+
+
+/* NAV MENU ANIMATION SYSTEM  LARGE SCREEN*/
+boxs.forEach((box) => {
+  box.addEventListener("mouseenter", (e) => {
+   
+    let contactIconContainer = document.querySelector(`.contact-icon-container-${e.target.id}`);  
+    contactIconContainer.classList.remove('animation-back')   
+    let calcAnimationWidth = (e.target.offsetWidth - 45)
+    console.log(calcAnimationWidth);
+    document.documentElement.style.setProperty('--animation-end-width' , `${calcAnimationWidth}px `)
+    contactIconContainer.classList.add('animation')   
+    let textContactInfos = document.querySelector(`.text-contact-info-${e.target.id}`)
+   
+    setTimeout(()=>{
+      textContactInfos.style.display = 'flex'
+    },500)
+
+    let textContactInfoMobile = document.querySelector(`.text-contact-info-mobile-${e.target.id}`)
+    textContactInfoMobile.style.display = 'none';
+
+    
+  });
+});
+
+boxs.forEach((box) => {
+  box.addEventListener("mouseleave", (e) => {
+    
+    let contactIconContainer = document.querySelector(`.contact-icon-container-${e.target.id}`);  
+    contactIconContainer.classList.remove('animation')   
+
+      contactIconContainer.classList.add('animation-back')   
+      let textContactInfos = document.querySelector(`.text-contact-info-${e.target.id}`)
+      
+        textContactInfos.style.display = 'none'
+
+    let textContactInfoMobile = document.querySelector(`.text-contact-info-mobile-${e.target.id}`)
+    if (window.matchMedia("(max-width: 600px)").matches) {
+      textContactInfoMobile.style.display = 'flex';
+    } else {
+      textContactInfoMobile.style.display = 'none';
+    }
+  
+
+   
+     
+      
+    
+  });
+});
+
+roundBtn.forEach((btn) => {
+  btn.addEventListener("mouseenter", (e) => {    
+    let longBtn = document.querySelector(`.${e.target.id}`);
+    longBtn.style.width = "135px";
+    longBtn.classList.add("long-shadow")
+   
+  });
+});
+
+roundBtn.forEach((btn) => {
+  btn.addEventListener("mouseleave", (e) => {
+    let longBtn = document.querySelector(`.${e.target.id}`);
+    longBtn.style.width = "35px";
+    longBtn.classList.remove("long-shadow")
+
+  });
 });
 
 /*SCROOL SYSTEM */
 window.addEventListener("scroll", () => {
-  const header = document.querySelector("header");
+  
+  /* On SCROLL CHANGE COLOR AND SHADOW ALL SCREEN*/
   header.classList.toggle("sticky", window.scrollY > 0);
+  
+
+  LogoA.classList.toggle("sticky", window.scrollY > 0);
+  
+  if (window.matchMedia("(min-width: 990px)").matches){
+ /* On SCROLL CHANGE COLOR AND SHADOW LARGE SCREEN*/
+  roundBtn.forEach((btn) => {
+    btn.classList.toggle("sticky", window.scrollY > 0);
+  });
+  menuIcon.forEach((ico) => {
+    ico.classList.toggle("sticky", window.scrollY > 0);
+  });
+  longBnts.forEach((btn) => {
+    btn.classList.toggle("sticky", window.scrollY > 0);
+  });
+  longBtnAs.forEach((longBtnA) => {
+    longBtnA.classList.toggle("sticky", window.scrollY > 0);
+  });
+
+  changeLanguageBtnToEN.classList.toggle("sticky", window.scrollY > 0);
+  changeLanguageBtnToFR.classList.toggle("sticky", window.scrollY > 0);
+  }
+  /* On SCROLL CHANGE COLOR AND SHADOW SMALL SCREEN*/
+  if (window.matchMedia("(max-width: 992px)").matches){
+  hamburgerMenu.classList.toggle("sticky", window.scrollY > 0);
+  ToggleMenuIcon.classList.toggle("sticky", window.scrollY > 0);
+  ToggleMenuCloseIcon.classList.toggle("sticky", window.scrollY > 0);
+  }
+  
+  
 });
 
-/*MOBILE / DESKTOP MENU TOGGLE */
+/*MOBILE / DESKTOP MENU TOGGLE SYSTEM*/
+
 const toggleMenu = () => {
   let menuToggle = document.querySelector(".toggle");
-  let menu = document.querySelector(".menu");
+  let menu = document.querySelector(".menu"); 
+  
   menuToggle.classList.toggle("active");
   menu.classList.toggle("active");
+  ToggleMenuIcon.classList.toggle("opacity");
+  ToggleMenuCloseIcon.classList.toggle("opacity");
+
+
 };
 
 /*MODALS*/
@@ -486,29 +541,18 @@ function changelanguageToEng() {
   downloadResumeBtn.innerHTML = languageVersion.downloadResumeBtn.EN;
   aboutMeBtn.innerHTML = languageVersion.aboutMeBtn.EN;
 
-  btnProjectLinkPager.innerHTML = languageVersion.btnProjectLinkGeritch.EN;
-  btnProjectLinkGeritch.innerHTML = languageVersion.btnProjectLinkGeritch.EN;
-  btnProjectLinkGNshop.innerHTML = languageVersion.btnProjectLinkGNshop.EN;
-  btnProjectLinkLazyBeast.innerHTML =
-    languageVersion.btnProjectLinkLazyBeast.EN;
-  btnProjectLinkCineApp.innerHTML = languageVersion.btnProjectLinkCineApp.EN;
-  btnProjectLinkBookApp.innerHTML = languageVersion.btnProjectLinkBookApp.EN;
-  btnProjectLinkFlagApp.innerHTML = languageVersion.btnProjectLinkFlagApp.EN;
-  btnProjectLinkFaceDetection.innerHTML =
-    languageVersion.btnProjectLinkFaceDetection.EN;
-  btnProjectLinkPiano.innerHTML = languageVersion.btnProjectLinkPiano.EN;
-  btnProjectLinkBadCitizen.innerHTML =
-    languageVersion.btnProjectLinkBadCitizen.EN;
-  btnProjectLinkTicTacToe.innerHTML =
-    languageVersion.btnProjectLinkTicTacToe.EN;
+  btnProjectLinkWebsite.forEach((btn) => {
 
-  btnSeeMore.innerHTML = languageVersion.btnSeeMore.EN;
-
+btn.innerHTML = languageVersion.btnProjectLinkWebsite.EN;
+  })
+  
   bonjour.innerHTML = languageVersion.bonjour.EN;
   developeur.innerHTML = languageVersion.developeur.EN;
 
   workTitle.innerHTML = languageVersion.workTitle.EN;
+  modalTextDisney.innerHTML = languageVersion.modalTextDisney.EN;
 
+  modalTextTesla.innerHTML = languageVersion.modalTextTesla.EN;
   modalTextPager.innerHTML = languageVersion.modalTextPager.EN;
   modalTextGeritch.innerHTML = languageVersion.modalTextGeritch.EN;
   modalTextGnShop.innerHTML = languageVersion.modalTextEcommerce.EN;
@@ -520,8 +564,6 @@ function changelanguageToEng() {
   modalTextPiano.innerHTML = languageVersion.modalTextPiano.EN;
   modalTextTicTacToe.innerHTML = languageVersion.modalTextTicTacToe.EN;
   modalTextBadCitizen.innerHTML = languageVersion.modalTextBadCitizen.EN;
-
-  
 
   titleAboutMe.innerHTML = languageVersion.titleAboutMe.EN;
   textAboutMe.innerHTML = languageVersion.textAboutMe.EN;
@@ -540,8 +582,7 @@ function changelanguageToEng() {
   textCommerce.innerHTML = languageVersion.textCommerce.EN;
 
   titleFormContact.innerHTML = languageVersion.titleFormContact.EN;
-  formAdresse.innerHTML = languageVersion.formAdresse.EN;
-  formPhone.innerHTML = languageVersion.formPhone.EN;
+ 
   btnSendForm.innerHTML = languageVersion.btnSendForm.EN;
   inputFormName.placeholder = languageVersion.inputFormName.EN;
   inputFormMail.placeholder = languageVersion.inputFormMail.EN;
@@ -560,7 +601,9 @@ function changelanguageToFR() {
   aboutMeBtn.innerHTML = languageVersion.aboutMeBtn.FR;
   downloadResumeBtn.innerHTML = languageVersion.downloadResumeBtn.FR;
   workTitle.innerHTML = languageVersion.workTitle.FR;
+  modalTextDisney.innerHTML = languageVersion.modalTextDisney.FR;
 
+  modalTextTesla.innerHTML = languageVersion.modalTextTesla.FR;
   modalTextPager.innerHTML = languageVersion.modalTextPager.FR;
   modalTextGeritch.innerHTML = languageVersion.modalTextGeritch.FR;
   modalTextGnShop.innerHTML = languageVersion.modalTextEcommerce.FR;
@@ -573,25 +616,13 @@ function changelanguageToFR() {
   modalTextTicTacToe.innerHTML = languageVersion.modalTextTicTacToe.FR;
   modalTextBadCitizen.innerHTML = languageVersion.modalTextBadCitizen.FR;
 
-  btnProjectLinkPager.innerHTML = languageVersion.btnProjectLinkGeritch.FR;
-  btnProjectLinkGeritch.innerHTML = languageVersion.btnProjectLinkGeritch.FR;
-  btnProjectLinkGNshop.innerHTML = languageVersion.btnProjectLinkGNshop.FR;
-  btnProjectLinkLazyBeast.innerHTML =
-    languageVersion.btnProjectLinkLazyBeast.FR;
-  btnProjectLinkLazyBeast.innerHTML =
-    languageVersion.btnProjectLinkLazyBeast.FR;
-  btnProjectLinkCineApp.innerHTML = languageVersion.btnProjectLinkCineApp.FR;
-  btnProjectLinkBookApp.innerHTML = languageVersion.btnProjectLinkBookApp.FR;
-  btnProjectLinkFlagApp.innerHTML = languageVersion.btnProjectLinkFlagApp.FR;
-  btnProjectLinkFaceDetection.innerHTML =
-    languageVersion.btnProjectLinkFaceDetection.FR;
-  btnProjectLinkPiano.innerHTML = languageVersion.btnProjectLinkPiano.FR;
-  btnProjectLinkBadCitizen.innerHTML =
-    languageVersion.btnProjectLinkBadCitizen.FR;
-  btnProjectLinkTicTacToe.innerHTML =
-    languageVersion.btnProjectLinkTicTacToe.FR;
+  btnProjectLinkWebsite.forEach((btn) => {
 
-  btnSeeMore.innerHTML = languageVersion.btnSeeMore.FR;
+    btn.innerHTML = languageVersion.btnProjectLinkWebsite.FR;
+      })
+      
+ 
+
 
   titleAboutMe.innerHTML = languageVersion.titleAboutMe.FR;
   textAboutMe.innerHTML = languageVersion.textAboutMe.FR;
@@ -610,8 +641,7 @@ function changelanguageToFR() {
   textCommerce.innerHTML = languageVersion.textCommerce.FR;
   titleFormContact.innerHTML = languageVersion.titleFormContact.FR;
 
-  formAdresse.innerHTML = languageVersion.formAdresse.FR;
-  formPhone.innerHTML = languageVersion.formPhone.FR;
+ 
   btnSendForm.innerHTML = languageVersion.btnSendForm.FR;
   inputFormName.placeholder = languageVersion.inputFormName.FR;
   inputFormMail.placeholder = languageVersion.inputFormMail.FR;

@@ -1,0 +1,7 @@
+User-agent: Googlebot
+
+
+User-agent: *
+Allow: /
+
+Sitemap: http://www.gregoryneault.fr/sitemap.xml
