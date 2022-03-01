@@ -5,10 +5,10 @@
   --animation-end-width: 210px;
 }
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
   scroll-behavior: smooth;
   -webkit-appearance: none;
 }
@@ -19,12 +19,12 @@
 
 .logo {
   color: #141414;
+  cursor: default;
   font-size: 2.8rem;
-  text-decoration: none;
   font-weight: 700;
   letter-spacing: 4px;
+  text-decoration: none;
   text-shadow: 2px 2px 4px #000000, -2px -2px 4px #4c4c4c;
-  cursor: default;
 }
 
 .logo.sticky {
@@ -33,38 +33,37 @@
 }
 
 .expendable-btn-container {
+  align-items: center;
   display: flex;
-  width: 100%;
   height: 80px;
   justify-content: center;
-  align-items: center;
+  width: 100%;
 }
 
 .global-container {
-  position: relative;
-  width: 40px;
-  margin: 65px;
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: flex-start;
+  margin: 65px;
+  position: relative;
   text-align: center;
+  width: 40px;
 }
 
 .round-btn {
-  width: 40px;
-  height: 40px;
-  border-radius: 30%;
-  position: relative;
-  text-align: center;
-  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-  position: absolute;
-  color: #fff;
+  border-radius: 30%;
   background: linear-gradient(145deg, #151515, #121212);
-  box-shadow: 7px 7px 10px #090909, -5px -5px 8px #2b2b2b;
+  box-shadow: 7px 7px 10px #090909, -5px -5px 8px #2b2b2b; 
   color: #fff;
+  display: flex;
+  font-size: 1.2rem;
+  height: 40px;
+  justify-content: center;
+  position: relative;
+  position: absolute;
+  text-align: center;
+  width: 40px;
 }
 
 .longBtn:hover {
@@ -73,27 +72,24 @@
 }
 
 .round-btn.sticky {
-  color: black;
   background: linear-gradient(145deg, #f0f0f0, #cacaca);
   box-shadow: 7px 7px 10px #8d8d8d, -7px -7px 10px #ffffff;
+  color: black;
 }
 
 .longBtn {
+  align-items: center;
+  background: linear-gradient(145deg, #151515, #121212);
+  border-radius: 20px;
+  color: #fff;
+  display: flex;
+  height: 35px;
+  justify-content: center;
   overflow: hidden;
   position: absolute;
-  width: 35px;
-  height: 35px;
-
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   transform-origin: left;
-  color: transparent;
   transition: all 300ms ease;
-  background: linear-gradient(145deg, #151515, #121212);
-
-  color: #fff;
+  width: 35px;
 }
 
 .long-shadow {
@@ -101,16 +97,16 @@
     #00b87b38 0px 16px 8px, #00b87b18 0px 32px 16px;
 }
 .longBtn.sticky {
-  color: black;
   background: linear-gradient(145deg, #f0f0f0, #cacaca);
   box-shadow: 7px 7px 10px #8d8d8d, -7px -7px 10px #ffffff;
+  color: black;
 }
 
 .long-btn-a {
   color: #00b87a;
-  margin-left: 19px;
   font-size: 0.8rem;
   letter-spacing: 1.35px;
+  margin-left: 19px;
   text-decoration: none;
   text-shadow: #00b87b9a -2px -2px 4px;
 }
@@ -120,12 +116,12 @@
 }
 
 .flag-container {
-  margin-left: 20px;
-  margin-top: -3px;
+  align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  margin-left: 20px;
+  margin-top: -3px;
   right: 0;
 }
 
@@ -239,7 +235,6 @@ header.sticky {
   justify-content: space-between;
   align-items: center;
 }
-
 
 /*---------FIRST VIEW------------*/
 section {
@@ -441,7 +436,7 @@ section {
 .work .content .workBx {
   padding: 20px;
   text-align: center;
-  margin: 10px 1px;
+  margin: 10px 10px;
 }
 .work-title {
   color: #e0e0e0;
@@ -851,6 +846,15 @@ section {
 #contact-icon {
   width: 10%;
 }
+
+.contact-img {
+  width: 30px;
+  filter: invert(100%);
+}
+
+#phone-img {
+  height: 32px;
+}
 .text-contact-info-1,
 .text-contact-info-2,
 .text-contact-info-3,
@@ -873,7 +877,7 @@ section {
 .text-contact-info-mobile-3,
 .text-contact-info-mobile-4,
 .text-contact-info-mobile-5,
-.text-contact-info-mobile-6{
+.text-contact-info-mobile-6 {
   display: none;
 }
 .text-contact-info-1,
@@ -930,7 +934,7 @@ a {
   resize: none;
   background: #141414;
   box-shadow: inset 7px 7px 14px #0b0b0b, inset -7px -7px 14px #1d1d1d;
-  
+
   /* -webkit-box-shadow: inset 7px 7px 14px #0b0b0b, inset -7px -7px 14px #1d1d1d; */
 }
 
@@ -948,7 +952,6 @@ a {
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 2px;
-
 }
 
 .btn-send {
@@ -1010,13 +1013,12 @@ a {
   z-index: 10;
   color: white;
   background: rgba(18, 18, 18, 0.8);
-  
+
   width: 80vw;
   height: 80vh;
   max-height: 80%;
   max-width: 80%;
   z-index: 5001;
-  
 }
 
 .modal.active {
@@ -1028,8 +1030,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
- 
-  
+
   border-bottom: 1px solid rgb(86, 88, 248);
 }
 
@@ -1037,8 +1038,6 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
- 
-
 }
 .modal-header .title img {
   padding: 2px;
@@ -1166,8 +1165,6 @@ a {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.6);
   pointer-events: none;
- 
-  
 }
 
 #overlay.active {
@@ -1176,7 +1173,6 @@ a {
   pointer-events: all;
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
-  
 }
 
 /*Responsive*/
@@ -1273,16 +1269,13 @@ a {
     font-size: 1.5rem;
     text-decoration: none;
     outline: none;
+
+    color: #333;
   }
   .container-toggle-link:first-child {
     box-shadow: 17px 17px 34px #b3b3b3, -10px -10px 34px #ffffff;
   }
 
-  .link-toggle-link {
-    text-decoration: none;
-    outline: none;
-    color: #333;
-  }
   /*  header.sticky .toggle {
     filter: invert(1);
   } */
@@ -1325,6 +1318,7 @@ a {
   .work .content .workBx {
     width: 100%;
     padding: 0 10px;
+    margin: 10px 0;
   }
 
   .contentBx {
@@ -1370,7 +1364,6 @@ a {
   .text-about-me {
     overflow-x: hidden;
     width: 100%;
-    
   }
 
   .banner {
@@ -1430,7 +1423,7 @@ a {
 
   .heading h2 {
     font-size: 2.5rem;
-}
+  }
 
   .contentBx {
     padding: 0 0.3rem;
@@ -1452,7 +1445,7 @@ a {
     height: 25px;
     padding: 0;
   }
-  .link-social-on-mobile{
+  .link-social-on-mobile {
     display: none;
   }
 
@@ -1461,15 +1454,14 @@ a {
   .text-contact-info-mobile-3,
   .text-contact-info-mobile-4,
   .text-contact-info-mobile-5,
-  .text-contact-info-mobile-6
-  {
+  .text-contact-info-mobile-6 {
     display: flex;
     padding-left: 20px;
     text-decoration: none;
     color: #00b87a;
   }
 
-  .contactInfo{
+  .contactInfo {
     margin-bottom: 35px;
   }
 }

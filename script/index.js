@@ -647,3 +647,4 @@ function changelanguageToFR() {
   inputFormMail.placeholder = languageVersion.inputFormMail.FR;
   formTextarea.placeholder = languageVersion.formTextarea.FR;
 }
+changelanguageToEng();
